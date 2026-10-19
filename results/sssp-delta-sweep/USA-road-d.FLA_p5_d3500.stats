@@ -1,0 +1,69 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 7
+STAT, 0, dGraph_Generic, EdgeLoading, HostValues, 7; 7; 7; 7; 7
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, CuSPStateRounds, HostValues, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 8
+STAT, 0, dGraph_Generic, EdgeInspection, HostValues, 6; 6; 7; 8; 8
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 6
+STAT, 0, dGraph_Generic, GraphReading, HostValues, 6; 6; 6; 6; 6
+STAT, 0, DistBench, GraphConstructTime, HMAX, 50
+STAT, 0, DistBench, GraphConstructTime, HostValues, 42; 48; 47; 49; 50
+STAT, 0, InitializeGraph_0, Time, HMAX, 1
+STAT, 0, InitializeGraph_0, Time, HostValues, 1; 1; 1; 1; 1
+STAT, 0, Gluon, ReduceSendBytes_SSSP_0, HSUM, 1152024
+STAT, 0, Gluon, ReduceSendBytes_SSSP_0, HostValues, 203620; 204168; 94232; 320616; 329388
+STAT, 0, Gluon, ReduceNumMessages_SSSP_0, HSUM, 47820
+STAT, 0, Gluon, ReduceNumMessages_SSSP_0, HostValues, 9564; 9564; 9564; 9564; 9564
+STAT, 0, Gluon, ReduceSendBytes_SSSP_1, HSUM, 1152024
+STAT, 0, Gluon, ReduceSendBytes_SSSP_1, HostValues, 203620; 204168; 94232; 320616; 329388
+STAT, 0, Gluon, ReduceNumMessages_SSSP_1, HSUM, 47820
+STAT, 0, Gluon, ReduceNumMessages_SSSP_1, HostValues, 9564; 9564; 9564; 9564; 9564
+STAT, 0, Gluon, ReduceSendBytes_SSSP_2, HSUM, 1152024
+STAT, 0, Gluon, ReduceSendBytes_SSSP_2, HostValues, 203620; 204168; 94232; 320616; 329388
+STAT, 0, Gluon, ReduceNumMessages_SSSP_2, HSUM, 47820
+STAT, 0, Gluon, ReduceNumMessages_SSSP_2, HostValues, 9564; 9564; 9564; 9564; 9564
+STAT, 0, SSSP, NumWorkItems_0, HSUM, 22156002
+STAT, 0, SSSP, NumWorkItems_0, HostValues, 2683290; 5157195; 3741072; 6112955; 4461490
+STAT, 0, SSSP, NumIterations_0, HMAX, 2391
+STAT, 0, SSSP, NumIterations_0, HostValues, 2391; 2391; 2391; 2391; 2391
+STAT, 0, SSSP, Timer_0, HMAX, 772
+STAT, 0, SSSP, Timer_0, HostValues, 772; 772; 772; 772; 772
+STAT, 0, SSSP, NumWorkItems_1, HSUM, 22156002
+STAT, 0, SSSP, NumWorkItems_1, HostValues, 2683290; 5157195; 3741072; 6112955; 4461490
+STAT, 0, SSSP, NumIterations_1, HMAX, 2391
+STAT, 0, SSSP, NumIterations_1, HostValues, 2391; 2391; 2391; 2391; 2391
+STAT, 0, SSSP, Timer_1, HMAX, 773
+STAT, 0, SSSP, Timer_1, HostValues, 773; 773; 773; 773; 773
+STAT, 0, SSSP, NumWorkItems_2, HSUM, 22156002
+STAT, 0, SSSP, NumWorkItems_2, HostValues, 2683290; 5157195; 3741072; 6112955; 4461490
+STAT, 0, SSSP, NumIterations_2, HMAX, 2391
+STAT, 0, SSSP, NumIterations_2, HostValues, 2391; 2391; 2391; 2391; 2391
+STAT, 0, SSSP, Timer_2, HMAX, 772
+STAT, 0, SSSP, Timer_2, HostValues, 772; 772; 772; 772; 772
+STAT, 0, SSSP, TimerTotal, HMAX, 2376
+STAT, 0, SSSP, TimerTotal, HostValues, 2371; 2376; 2375; 2376; 2375
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.01117
+STAT, 0, Gluon, ReplicationFactor, HostValues, 1.01117
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/sssp-push-dist /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.FLA/USA-road-d.FLA.gr --exec=Sync --delta=3500 --startNode=316606 -t=1 --runs=3 --maxIterations=100000000 --statFile=USA-road-d.FLA_p5_d3500.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/sssp-push-dist /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.FLA/USA-road-d.FLA.gr --exec=Sync --delta=3500 --startNode=316606 -t=1 --runs=3 --maxIterations=100000000 --statFile=USA-road-d.FLA_p5_d3500.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 5
+PARAM, 0, DistBench, Hosts, HostValues, 5
+PARAM, 0, DistBench, Runs, HOST_0, 3
+PARAM, 0, DistBench, Runs, HostValues, 3
+PARAM, 0, DistBench, Run_UUID, HOST_0, eab12ae9-8def-4fb0-b5ad-affebba89706
+PARAM, 0, DistBench, Run_UUID, HostValues, eab12ae9-8def-4fb0-b5ad-affebba89706
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.FLA/USA-road-d.FLA.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.FLA/USA-road-d.FLA.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, SSSP, Max Iterations, HOST_0, 100000000
+PARAM, 0, SSSP, Max Iterations, HostValues, 100000000
+PARAM, 0, SSSP, Source Node ID, HOST_0, 316606
+PARAM, 0, SSSP, Source Node ID, HostValues, 316606
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0
+PARAM, 0, dGraph, GenericPartitioner, HostValues, 0; 0; 0; 0; 0

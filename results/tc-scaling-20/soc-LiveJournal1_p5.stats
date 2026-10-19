@@ -1,0 +1,183 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, GetNodeDegrees, Time, HMAX, 28
+STAT, 0, GetNodeDegrees, Time, HostValues, 28; 28; 28; 28; 28
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HSUM, 155122512
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HostValues, 6742288; 12370448; 16371440; 29718288; 89920048
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HSUM, 89
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HostValues, 17; 21; 25; 17; 9
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HSUM, 643502368
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HostValues, 125146664; 158053992; 183341088; 128706712; 48253912
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HMAX, 8389520
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HostValues, 8389048; 8389440; 8389136; 8389520; 8388672
+STAT, 0, dGraph_Mining, EdgeLoading, HMAX, 2570
+STAT, 0, dGraph_Mining, EdgeLoading, HostValues, 2570; 2530; 2528; 2507; 2535
+STAT, 0, dGraph_Mining, TotalNodeProxies, HOST_0, 8455229
+STAT, 0, dGraph_Mining, TotalNodeProxies, HostValues, 8455229
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HOST_0, 116107825
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HostValues, 116107825
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HOST_0, 85702474
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HostValues, 85702474
+STAT, 0, dGraph_Mining, TotalKeptEdges, HOST_0, 42851237
+STAT, 0, dGraph_Mining, TotalKeptEdges, HostValues, 42851237
+STAT, 0, dGraph_Mining, GraphAllocation, HMAX, 28
+STAT, 0, dGraph_Mining, GraphAllocation, HostValues, 4; 6; 6; 10; 28
+STAT, 0, dGraph_Mining, EdgeInspection, HMAX, 1524
+STAT, 0, dGraph_Mining, EdgeInspection, HostValues, 1472; 1487; 1506; 1524; 1450
+STAT, 0, dGraph_Mining, GraphReading, HMAX, 77
+STAT, 0, dGraph_Mining, GraphReading, HostValues, 60; 62; 60; 64; 77
+STAT, 0, OutgoingNodeInspection, Time, HMAX, 11
+STAT, 0, OutgoingNodeInspection, Time, HostValues, 11; 9; 7; 7; 9
+STAT, 0, DistBench, GraphConstructTime, HMAX, 4209
+STAT, 0, DistBench, GraphConstructTime, HostValues, 4205; 4209; 4209; 4209; 4209
+STAT, 0, DistMiningBench, DistGraphInitialization, HMAX, 4209
+STAT, 0, DistMiningBench, DistGraphInitialization, HostValues, 4205; 4209; 4209; 4209; 4209
+STAT, 0, CSREdgeSort, Time, HMAX, 207
+STAT, 0, CSREdgeSort, Time, HostValues, 74; 154; 180; 193; 207
+STAT, 0, TC, SortEdgesCPU, HMAX, 207
+STAT, 0, TC, SortEdgesCPU, HostValues, 74; 154; 180; 193; 207
+STAT, 0, TC, Timer_0, HMAX, 10069
+STAT, 0, TC, Timer_0, HostValues, 10069; 9989; 9962; 9950; 9935
+STAT, 0, TC, Timer_1, HMAX, 9953
+STAT, 0, TC, Timer_1, HostValues, 9953; 9953; 9953; 9953; 9953
+STAT, 0, TC, Timer_2, HMAX, 9945
+STAT, 0, TC, Timer_2, HostValues, 9945; 9945; 9945; 9945; 9945
+STAT, 0, TC, Timer_3, HMAX, 9945
+STAT, 0, TC, Timer_3, HostValues, 9945; 9945; 9945; 9945; 9945
+STAT, 0, TC, Timer_4, HMAX, 9975
+STAT, 0, TC, Timer_4, HostValues, 9975; 9975; 9975; 9975; 9975
+STAT, 0, TC, Timer_5, HMAX, 9977
+STAT, 0, TC, Timer_5, HostValues, 9977; 9977; 9977; 9977; 9977
+STAT, 0, TC, Timer_6, HMAX, 9981
+STAT, 0, TC, Timer_6, HostValues, 9981; 9981; 9981; 9981; 9981
+STAT, 0, TC, Timer_7, HMAX, 9973
+STAT, 0, TC, Timer_7, HostValues, 9973; 9973; 9973; 9973; 9973
+STAT, 0, TC, Timer_8, HMAX, 9971
+STAT, 0, TC, Timer_8, HostValues, 9971; 9971; 9971; 9971; 9971
+STAT, 0, TC, Timer_9, HMAX, 9961
+STAT, 0, TC, Timer_9, HostValues, 9961; 9961; 9961; 9961; 9961
+STAT, 0, TC, Timer_10, HMAX, 9955
+STAT, 0, TC, Timer_10, HostValues, 9955; 9955; 9955; 9955; 9955
+STAT, 0, TC, Timer_11, HMAX, 9980
+STAT, 0, TC, Timer_11, HostValues, 9980; 9980; 9980; 9980; 9980
+STAT, 0, TC, Timer_12, HMAX, 9976
+STAT, 0, TC, Timer_12, HostValues, 9976; 9976; 9976; 9976; 9976
+STAT, 0, TC, Timer_13, HMAX, 9994
+STAT, 0, TC, Timer_13, HostValues, 9994; 9994; 9994; 9994; 9994
+STAT, 0, TC, Timer_14, HMAX, 9974
+STAT, 0, TC, Timer_14, HostValues, 9974; 9974; 9974; 9974; 9974
+STAT, 0, TC, Timer_15, HMAX, 9996
+STAT, 0, TC, Timer_15, HostValues, 9996; 9996; 9996; 9996; 9996
+STAT, 0, TC, Timer_16, HMAX, 9993
+STAT, 0, TC, Timer_16, HostValues, 9993; 9993; 9993; 9993; 9993
+STAT, 0, TC, Timer_17, HMAX, 10006
+STAT, 0, TC, Timer_17, HostValues, 10006; 10006; 10006; 10006; 10006
+STAT, 0, TC, Timer_18, HMAX, 10016
+STAT, 0, TC, Timer_18, HostValues, 10016; 10016; 10016; 10016; 10016
+STAT, 0, TC, Timer_19, HMAX, 9975
+STAT, 0, TC, Timer_19, HostValues, 9975; 9975; 9975; 9975; 9975
+STAT, 0, TC, TimerTotal, HMAX, 203909
+STAT, 0, TC, TimerTotal, HostValues, 203904; 203908; 203909; 203908; 203908
+STAT, 0, TC_0, Time, HMAX, 9962
+STAT, 0, TC_0, Time, HostValues, 6266; 6499; 9962; 7995; 5208
+STAT, 0, TC_0, Iterations, HSUM, 4847571
+STAT, 0, TC_0, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_1, Time, HMAX, 9953
+STAT, 0, TC_1, Time, HostValues, 6283; 6503; 9953; 7987; 5202
+STAT, 0, TC_1, Iterations, HSUM, 4847571
+STAT, 0, TC_1, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_2, Time, HMAX, 9945
+STAT, 0, TC_2, Time, HostValues, 6297; 6497; 9945; 7978; 5230
+STAT, 0, TC_2, Iterations, HSUM, 4847571
+STAT, 0, TC_2, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_3, Time, HMAX, 9945
+STAT, 0, TC_3, Time, HostValues, 6261; 6488; 9945; 7988; 5225
+STAT, 0, TC_3, Iterations, HSUM, 4847571
+STAT, 0, TC_3, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_4, Time, HMAX, 9975
+STAT, 0, TC_4, Time, HostValues, 6295; 6520; 9975; 7965; 5216
+STAT, 0, TC_4, Iterations, HSUM, 4847571
+STAT, 0, TC_4, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_5, Time, HMAX, 9977
+STAT, 0, TC_5, Time, HostValues, 6289; 6524; 9977; 7989; 5218
+STAT, 0, TC_5, Iterations, HSUM, 4847571
+STAT, 0, TC_5, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_6, Time, HMAX, 9981
+STAT, 0, TC_6, Time, HostValues, 6322; 6515; 9981; 8004; 5224
+STAT, 0, TC_6, Iterations, HSUM, 4847571
+STAT, 0, TC_6, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_7, Time, HMAX, 9973
+STAT, 0, TC_7, Time, HostValues, 6311; 6510; 9973; 7989; 5217
+STAT, 0, TC_7, Iterations, HSUM, 4847571
+STAT, 0, TC_7, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_8, Time, HMAX, 9971
+STAT, 0, TC_8, Time, HostValues, 6285; 6515; 9971; 8002; 5232
+STAT, 0, TC_8, Iterations, HSUM, 4847571
+STAT, 0, TC_8, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_9, Time, HMAX, 9961
+STAT, 0, TC_9, Time, HostValues, 6281; 6534; 9961; 8000; 5233
+STAT, 0, TC_9, Iterations, HSUM, 4847571
+STAT, 0, TC_9, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_10, Time, HMAX, 9955
+STAT, 0, TC_10, Time, HostValues, 6307; 6531; 9955; 8030; 5216
+STAT, 0, TC_10, Iterations, HSUM, 4847571
+STAT, 0, TC_10, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_11, Time, HMAX, 9980
+STAT, 0, TC_11, Time, HostValues, 6308; 6528; 9980; 8026; 5245
+STAT, 0, TC_11, Iterations, HSUM, 4847571
+STAT, 0, TC_11, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_12, Time, HMAX, 9976
+STAT, 0, TC_12, Time, HostValues, 6310; 6534; 9976; 8049; 5224
+STAT, 0, TC_12, Iterations, HSUM, 4847571
+STAT, 0, TC_12, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_13, Time, HMAX, 9994
+STAT, 0, TC_13, Time, HostValues, 6346; 6522; 9994; 8021; 5220
+STAT, 0, TC_13, Iterations, HSUM, 4847571
+STAT, 0, TC_13, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_14, Time, HMAX, 9974
+STAT, 0, TC_14, Time, HostValues, 6324; 6545; 9974; 8044; 5246
+STAT, 0, TC_14, Iterations, HSUM, 4847571
+STAT, 0, TC_14, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_15, Time, HMAX, 9996
+STAT, 0, TC_15, Time, HostValues, 6310; 6536; 9996; 8049; 5231
+STAT, 0, TC_15, Iterations, HSUM, 4847571
+STAT, 0, TC_15, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_16, Time, HMAX, 9993
+STAT, 0, TC_16, Time, HostValues, 6314; 6534; 9993; 8033; 5226
+STAT, 0, TC_16, Iterations, HSUM, 4847571
+STAT, 0, TC_16, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_17, Time, HMAX, 10006
+STAT, 0, TC_17, Time, HostValues, 6316; 6535; 10006; 8044; 5223
+STAT, 0, TC_17, Iterations, HSUM, 4847571
+STAT, 0, TC_17, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_18, Time, HMAX, 10016
+STAT, 0, TC_18, Time, HostValues, 6308; 6534; 10016; 8049; 5235
+STAT, 0, TC_18, Iterations, HSUM, 4847571
+STAT, 0, TC_18, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_19, Time, HMAX, 9975
+STAT, 0, TC_19, Time, HostValues, 6352; 6533; 9975; 8053; 5240
+STAT, 0, TC_19, Iterations, HSUM, 4847571
+STAT, 0, TC_19, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HOST_0, 1.74422
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HostValues, 1.74422
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HOST_0, 2.70956
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HostValues, 2.70956
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr -symmetricGraph -t=1 --runs=20 --statFile=soc-LiveJournal1_p5.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr -symmetricGraph -t=1 --runs=20 --statFile=soc-LiveJournal1_p5.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 5
+PARAM, 0, DistBench, Hosts, HostValues, 5
+PARAM, 0, DistBench, Runs, HOST_0, 20
+PARAM, 0, DistBench, Runs, HostValues, 20
+PARAM, 0, DistBench, Run_UUID, HOST_0, 3c6d6d94-a8b8-4dbf-978c-c4411ce24ef7
+PARAM, 0, DistBench, Run_UUID, HostValues, 3c6d6d94-a8b8-4dbf-978c-c4411ce24ef7
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, dGraph_Mining, MiningGraph, HOST_0, 0
+PARAM, 0, dGraph_Mining, MiningGraph, HostValues, 0; 0; 0; 0; 0
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HOST_0, 1
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HostValues, 1; 1; 1; 1; 1

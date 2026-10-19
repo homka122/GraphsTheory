@@ -1,0 +1,88 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: TC - Distributed Multi-GPU Triangle Counting 
+TC on Distributed GPU (D-IrGL).
+
+[0] Master distribution time : 0.000419 seconds to read 184 bytes in 23 seeks (0.439141 MBPS)
+INFO: Calculating node degrees for partitioner
+[1] Master distribution time : 0.003268 seconds to read 360 bytes in 45 seeks (0.110159 MBPS)
+[0] Starting graph reading.
+[1] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[0] Inspection sends complete.
+[1] Inspection sends complete.
+[1] Inspection receives complete.
+[1] Need receive 14213853 edges; self is 26251881
+[1] Inspection allocation complete.
+[0] Inspection receives complete.
+[0] Need receive 8607389 edges; self is 16599356
+[0] Inspection allocation complete.
+[0] Edge loading time: 2.58706 seconds
+[0] Determining thread ranges
+[0] Graph construction complete.
+[1] Edge loading time: 2.63305 seconds
+[1] Determining thread ranges
+[1] Graph construction complete.
+[0] TC::go run 0 called
+[1] TC::go run 0 called
+Total number of triangles 285730264
+[0] TC::go run 1 called
+[1] TC::go run 1 called
+Total number of triangles 285730264
+[0] TC::go run 2 called
+[1] TC::go run 2 called
+[1] TC::go run 3 called
+Total number of triangles 285730264
+[0] TC::go run 3 called
+Total number of triangles 285730264
+[0] TC::go run 4 called
+[1] TC::go run 4 called
+[1] TC::go run 5 called
+Total number of triangles 285730264
+[0] TC::go run 5 called
+[1] TC::go run 6 called
+Total number of triangles 285730264
+[0] TC::go run 6 called
+[1] TC::go run 7 called
+Total number of triangles 285730264
+[0] TC::go run 7 called
+[1] TC::go run 8 called
+Total number of triangles 285730264
+[0] TC::go run 8 called
+[1] TC::go run 9 called
+Total number of triangles 285730264
+[0] TC::go run 9 called
+[1] TC::go run 10 called
+Total number of triangles 285730264
+[0] TC::go run 10 called
+[1] TC::go run 11 called
+Total number of triangles 285730264
+[0] TC::go run 11 called
+[1] TC::go run 12 called
+Total number of triangles 285730264
+[0] TC::go run 12 called
+[1] TC::go run 13 called
+Total number of triangles 285730264
+[0] TC::go run 13 called
+[1] TC::go run 14 called
+Total number of triangles 285730264
+[0] TC::go run 14 called
+[1] TC::go run 15 called
+Total number of triangles 285730264
+[0] TC::go run 15 called
+[1] TC::go run 16 called
+Total number of triangles 285730264
+[0] TC::go run 16 called
+[1] TC::go run 17 called
+Total number of triangles 285730264
+[0] TC::go run 17 called
+[1] TC::go run 18 called
+Total number of triangles 285730264
+[0] TC::go run 18 called
+[1] TC::go run 19 called
+Total number of triangles 285730264
+[0] TC::go run 19 called
+Total number of triangles 285730264

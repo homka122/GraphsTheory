@@ -1,0 +1,81 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, GetNodeDegrees, Time, HMAX, 28
+STAT, 0, GetNodeDegrees, Time, HostValues, 28; 28; 28; 28; 28
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HSUM, 155122512
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HostValues, 6742288; 12370448; 16371440; 29718288; 89920048
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HSUM, 89
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HostValues, 17; 21; 25; 17; 9
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HSUM, 643502368
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HostValues, 125146664; 158053992; 183341088; 128706712; 48253912
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HMAX, 8389520
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HostValues, 8389048; 8389440; 8389136; 8389520; 8388672
+STAT, 0, dGraph_Mining, EdgeLoading, HMAX, 2547
+STAT, 0, dGraph_Mining, EdgeLoading, HostValues, 2547; 2505; 2498; 2480; 2503
+STAT, 0, dGraph_Mining, TotalNodeProxies, HOST_0, 8455229
+STAT, 0, dGraph_Mining, TotalNodeProxies, HostValues, 8455229
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HOST_0, 116107825
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HostValues, 116107825
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HOST_0, 85702474
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HostValues, 85702474
+STAT, 0, dGraph_Mining, TotalKeptEdges, HOST_0, 42851237
+STAT, 0, dGraph_Mining, TotalKeptEdges, HostValues, 42851237
+STAT, 0, dGraph_Mining, GraphAllocation, HMAX, 26
+STAT, 0, dGraph_Mining, GraphAllocation, HostValues, 5; 6; 7; 10; 26
+STAT, 0, dGraph_Mining, EdgeInspection, HMAX, 1513
+STAT, 0, dGraph_Mining, EdgeInspection, HostValues, 1457; 1479; 1497; 1513; 1450
+STAT, 0, dGraph_Mining, GraphReading, HMAX, 76
+STAT, 0, dGraph_Mining, GraphReading, HostValues, 61; 60; 60; 67; 76
+STAT, 0, OutgoingNodeInspection, Time, HMAX, 9
+STAT, 0, OutgoingNodeInspection, Time, HostValues, 6; 9; 7; 7; 8
+STAT, 0, DistBench, GraphConstructTime, HMAX, 4174
+STAT, 0, DistBench, GraphConstructTime, HostValues, 4170; 4174; 4174; 4174; 4174
+STAT, 0, DistMiningBench, DistGraphInitialization, HMAX, 4174
+STAT, 0, DistMiningBench, DistGraphInitialization, HostValues, 4170; 4174; 4174; 4174; 4174
+STAT, 0, CSREdgeSort, Time, HMAX, 203
+STAT, 0, CSREdgeSort, Time, HostValues, 73; 152; 178; 190; 203
+STAT, 0, TC, SortEdgesCPU, HMAX, 203
+STAT, 0, TC, SortEdgesCPU, HostValues, 73; 152; 178; 190; 203
+STAT, 0, TC, Timer_0, HMAX, 10034
+STAT, 0, TC, Timer_0, HostValues, 10034; 9955; 9928; 9916; 9904
+STAT, 0, TC, Timer_1, HMAX, 9932
+STAT, 0, TC, Timer_1, HostValues, 9932; 9932; 9932; 9932; 9932
+STAT, 0, TC, Timer_2, HMAX, 9909
+STAT, 0, TC, Timer_2, HostValues, 9909; 9909; 9909; 9909; 9909
+STAT, 0, TC, TimerTotal, HMAX, 34124
+STAT, 0, TC, TimerTotal, HostValues, 34120; 34124; 34124; 34124; 34124
+STAT, 0, TC_0, Time, HMAX, 9928
+STAT, 0, TC_0, Time, HostValues, 6184; 6470; 9928; 7903; 5145
+STAT, 0, TC_0, Iterations, HSUM, 4847571
+STAT, 0, TC_0, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_1, Time, HMAX, 9932
+STAT, 0, TC_1, Time, HostValues, 6227; 6469; 9932; 7928; 5162
+STAT, 0, TC_1, Iterations, HSUM, 4847571
+STAT, 0, TC_1, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, TC_2, Time, HMAX, 9909
+STAT, 0, TC_2, Time, HostValues, 6217; 6472; 9909; 7930; 5168
+STAT, 0, TC_2, Iterations, HSUM, 4847571
+STAT, 0, TC_2, Iterations, HostValues, 210695; 386575; 511606; 928695; 2810000
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HOST_0, 1.74422
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HostValues, 1.74422
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HOST_0, 2.70956
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HostValues, 2.70956
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr -symmetricGraph -t=1 --runs=3 --statFile=soc-LiveJournal1_p5.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr -symmetricGraph -t=1 --runs=3 --statFile=soc-LiveJournal1_p5.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 5
+PARAM, 0, DistBench, Hosts, HostValues, 5
+PARAM, 0, DistBench, Runs, HOST_0, 3
+PARAM, 0, DistBench, Runs, HostValues, 3
+PARAM, 0, DistBench, Run_UUID, HOST_0, fa7f1094-fb9a-4d55-b24c-5f94e0527e9f
+PARAM, 0, DistBench, Run_UUID, HostValues, fa7f1094-fb9a-4d55-b24c-5f94e0527e9f
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.sym.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, dGraph_Mining, MiningGraph, HOST_0, 0
+PARAM, 0, dGraph_Mining, MiningGraph, HostValues, 0; 0; 0; 0; 0
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HOST_0, 1
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HostValues, 1; 1; 1; 1; 1

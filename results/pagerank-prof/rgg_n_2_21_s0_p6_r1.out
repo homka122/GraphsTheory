@@ -1,0 +1,63 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: PageRank - Compiler Generated Distributed Heterogeneous, per-round phase profiling
+Residual PageRank on Distributed Galois; writes per-round phase times and useful/empty master counts per host to <phaseLog>.host<ID>.csv.
+
+[3] Master distribution time : 0.003936 seconds to read 344 bytes in 42 seeks (0.0873984 MBPS)
+[3] Starting graph reading.
+[4] Master distribution time : 0.004067 seconds to read 336 bytes in 41 seeks (0.0826162 MBPS)
+[4] Starting graph reading.
+[1] Master distribution time : 0.00414 seconds to read 352 bytes in 43 seeks (0.0850242 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.004235 seconds to read 344 bytes in 43 seeks (0.0812279 MBPS)
+[2] Starting graph reading.
+[0] Master distribution time : 0.001535 seconds to read 176 bytes in 21 seeks (0.114658 MBPS)
+[0] Starting graph reading.
+[5] Master distribution time : 0.004851 seconds to read 328 bytes in 40 seeks (0.0676149 MBPS)
+[5] Starting graph reading.
+[3] Reading graph complete.
+[2] Reading graph complete.
+[5] Reading graph complete.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[4] Reading graph complete.
+[0] Edge inspection time: 0.026818 seconds to read 24920756 bytes (929.255 MBPS)
+[1] Edge inspection time: 0.03005 seconds to read 24899964 bytes (828.618 MBPS)
+[2] Edge inspection time: 0.034977 seconds to read 24910328 bytes (712.192 MBPS)
+[3] Edge inspection time: 0.039018 seconds to read 24922140 bytes (638.734 MBPS)
+[4] Edge inspection time: 0.043144 seconds to read 24903132 bytes (577.21 MBPS)
+[5] Edge inspection time: 0.048801 seconds to read 24902024 bytes (510.277 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.035771 seconds to read 24920756 bytes (696.675 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.035504 seconds to read 24899964 bytes (701.328 MBPS)
+[2] Edge loading time: 0.035256 seconds to read 24910328 bytes (706.556 MBPS)
+[1] Graph construction complete.
+[2] Graph construction complete.
+[3] Edge loading time: 0.035415 seconds to read 24922140 bytes (703.717 MBPS)
+[3] Graph construction complete.
+[4] Edge loading time: 0.03577 seconds to read 24903132 bytes (696.202 MBPS)
+[4] Graph construction complete.
+[5] Edge loading time: 0.035145 seconds to read 24902024 bytes (708.551 MBPS)
+[5] Graph construction complete.
+[4] InitializeGraph::go called
+[1] InitializeGraph::go called
+[2] InitializeGraph::go called
+[3] InitializeGraph::go called
+[5] InitializeGraph::go called
+[0] InitializeGraph::go called
+[5] PageRank::go run 0 called
+[0] PageRank::go run 0 called
+[1] PageRank::go run 0 called
+[3] PageRank::go run 0 called
+[2] PageRank::go run 0 called
+[4] PageRank::go run 0 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09714e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0

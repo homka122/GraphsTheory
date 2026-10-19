@@ -1,0 +1,12 @@
+diff --git a/libgalois/include/galois/substrate/NumaMem.h b/libgalois/include/galois/substrate/NumaMem.h
+index c9cbe6f2c..3a9fd2424 100644
+--- a/libgalois/include/galois/substrate/NumaMem.h
++++ b/libgalois/include/galois/substrate/NumaMem.h
+@@ -21,6 +21,7 @@
+ #define GALOIS_SUBSTRATE_NUMAMEM
+ 
+ #include <cstddef>
++#include <cstdint>
+ #include <memory>
+ #include <vector>
+ 

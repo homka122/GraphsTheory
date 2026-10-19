@@ -1,0 +1,66 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist, per-round phase profiling.
+BFS on Distributed Galois; writes compute/barrier/sync/term time per round and host to <phaseLog>.host<ID>.csv.
+
+[3] Master distribution time : 0.003205 seconds to read 328 bytes in 40 seeks (0.10234 MBPS)
+[3] Starting graph reading.
+[0] Master distribution time : 0.001257 seconds to read 176 bytes in 21 seeks (0.140016 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.002765 seconds to read 344 bytes in 42 seeks (0.124412 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.002743 seconds to read 344 bytes in 42 seeks (0.12541 MBPS)
+[2] Starting graph reading.
+[0] Reading graph complete.
+[3] Reading graph complete.
+[2] Reading graph complete.
+[1] Reading graph complete.
+[0] Edge inspection time: 0.041761 seconds to read 37361656 bytes (894.654 MBPS)
+[1] Edge inspection time: 0.048465 seconds to read 37369400 bytes (771.06 MBPS)
+[2] Edge inspection time: 0.055453 seconds to read 37380568 bytes (674.095 MBPS)
+[3] Edge inspection time: 0.063048 seconds to read 37346736 bytes (592.354 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.050146 seconds to read 37361656 bytes (745.058 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.049944 seconds to read 37369400 bytes (748.226 MBPS)
+[1] Graph construction complete.
+[2] Edge loading time: 0.050037 seconds to read 37380568 bytes (747.059 MBPS)
+[2] Graph construction complete.
+[3] Edge loading time: 0.049732 seconds to read 37346736 bytes (750.96 MBPS)
+[3] Graph construction complete.
+[0] InitializeGraph::go called
+[3] InitializeGraph::go called
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] BFS::go run 0 called
+[2] BFS::go run 0 called
+[1] BFS::go run 0 called
+[3] BFS::go run 0 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 1 called
+[1] BFS::go run 1 called
+[2] BFS::go run 1 called
+[3] BFS::go run 1 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 2 called
+[1] BFS::go run 2 called
+[2] BFS::go run 2 called
+[3] BFS::go run 2 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 3 called
+[2] BFS::go run 3 called
+[1] BFS::go run 3 called
+[3] BFS::go run 3 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 4 called
+[1] BFS::go run 4 called
+[2] BFS::go run 4 called
+[3] BFS::go run 4 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756

@@ -1,0 +1,26 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist, per-round phase profiling.
+BFS on Distributed Galois; writes compute/barrier/sync/term time per round and host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.000559 seconds to read 184 bytes in 23 seeks (0.329159 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.002776 seconds to read 360 bytes in 45 seeks (0.129683 MBPS)
+[1] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[0] Edge inspection time: 0.201743 seconds to read 151364940 bytes (750.286 MBPS)
+[1] Edge inspection time: 0.273146 seconds to read 202171272 bytes (740.158 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.703039 seconds to read 151364940 bytes (215.301 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.725288 seconds to read 202171272 bytes (278.746 MBPS)
+[1] Graph construction complete.
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[1] BFS::go run 0 called
+[0] BFS::go run 0 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13

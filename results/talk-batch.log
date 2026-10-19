@@ -1,0 +1,37 @@
+soc-LiveJournal1 P=1 rc=0 time_med=618 rounds=16 rf=1
+soc-LiveJournal1 P=2 rc=0 time_med=651 rounds=16 rf=1.6236
+soc-LiveJournal1 P=3 rc=0 time_med=611 rounds=16 rf=2.09265
+soc-LiveJournal1 P=4 rc=0 time_med=568 rounds=16 rf=2.46944
+soc-LiveJournal1 P=5 rc=0 time_med=545 rounds=16 rf=2.78637
+soc-LiveJournal1 P=6 rc=0 time_med=543 rounds=16 rf=3.05022
+roadNet-PA P=1 rc=0 time_med=746 rounds=595 rf=1
+roadNet-PA P=2 rc=0 time_med=397 rounds=595 rf=1.00714
+roadNet-PA P=3 rc=0 time_med=274 rounds=595 rf=1.01217
+roadNet-PA P=4 rc=0 time_med=222 rounds=595 rf=1.01467
+roadNet-PA P=5 rc=0 time_med=185 rounds=595 rf=1.01688
+roadNet-PA P=6 rc=0 time_med=180 rounds=595 rf=1.01862
+rgg_n_2_21_s0 P=1 rc=0 time_med=2122 rounds=759 rf=1
+rgg_n_2_21_s0 P=2 rc=0 time_med=1126 rounds=759 rf=1.00301
+rgg_n_2_21_s0 P=3 rc=0 time_med=823 rounds=759 rf=1.00457
+rgg_n_2_21_s0 P=4 rc=0 time_med=656 rounds=759 rf=1.00529
+rgg_n_2_21_s0 P=5 rc=0 time_med=554 rounds=759 rf=1.0068
+rgg_n_2_21_s0 P=6 rc=0 time_med=514 rounds=759 rf=1.00754
+roadNet-PA P=1 rc=0 time_med=1610 rounds=77
+roadNet-PA P=2 rc=0 time_med=801 rounds=77
+roadNet-PA P=3 rc=0 time_med=541 rounds=77
+roadNet-PA P=4 rc=0 time_med=415 rounds=77
+roadNet-PA P=5 rc=0 time_med=341 rounds=77
+roadNet-PA P=6 rc=0 time_med=307 rounds=77
+rgg_n_2_21_s0 P=1 rc=0 time_med=10146 rounds=77
+rgg_n_2_21_s0 P=2 rc=0 time_med=5109 rounds=77
+rgg_n_2_21_s0 P=3 rc=0 time_med=3389 rounds=77
+rgg_n_2_21_s0 P=4 rc=0 time_med=2590 rounds=77
+rgg_n_2_21_s0 P=5 rc=0 time_med=2150 rounds=77
+rgg_n_2_21_s0 P=6 rc=0 time_med=1913 rounds=77
+soc-LiveJournal1 N=1 proc=0 times=64842 64802 65029 
+soc-LiveJournal1 N=6 proc=0 times=129131 129229 129636 
+soc-LiveJournal1 N=6 proc=1 times=129355 130546 130542 
+soc-LiveJournal1 N=6 proc=2 times=127675 128624 127631 
+soc-LiveJournal1 N=6 proc=3 times=132710 131216 128488 
+soc-LiveJournal1 N=6 proc=4 times=132337 131234 131286 
+soc-LiveJournal1 N=6 proc=5 times=132034 130654 130777 

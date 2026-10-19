@@ -1,0 +1,77 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[3] Master distribution time : 0.004508 seconds to read 328 bytes in 40 seeks (0.0727595 MBPS)
+[4] Master distribution time : 0.003823 seconds to read 328 bytes in 41 seeks (0.0857965 MBPS)
+[4] Starting graph reading.
+[5] Master distribution time : 0.004536 seconds to read 312 bytes in 37 seeks (0.0687831 MBPS)
+[5] Starting graph reading.
+[0] Master distribution time : 0.001733 seconds to read 168 bytes in 21 seeks (0.0969417 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.004491 seconds to read 336 bytes in 42 seeks (0.0748163 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.00455 seconds to read 336 bytes in 41 seeks (0.0738462 MBPS)
+[2] Starting graph reading.
+[3] Starting graph reading.
+[4] Reading graph complete.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[5] Reading graph complete.
+[3] Reading graph complete.
+[0] Edge inspection time: 0.005669 seconds to read 4638536 bytes (818.228 MBPS)
+[1] Edge inspection time: 0.006168 seconds to read 4646692 bytes (753.355 MBPS)
+[2] Edge inspection time: 0.00665 seconds to read 4700476 bytes (706.839 MBPS)
+[3] Edge inspection time: 0.007007 seconds to read 4591648 bytes (655.294 MBPS)
+[4] Edge inspection time: 0.008355 seconds to read 4653888 bytes (557.018 MBPS)
+[5] Edge inspection time: 0.008138 seconds to read 4745920 bytes (583.18 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.006416 seconds to read 6447080 bytes (1004.84 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.006825 seconds to read 6455232 bytes (945.822 MBPS)
+[3] Edge loading time: 0.006782 seconds to read 6400184 bytes (943.702 MBPS)
+[2] Edge loading time: 0.006989 seconds to read 6509008 bytes (931.322 MBPS)
+[4] Edge loading time: 0.006357 seconds to read 6462424 bytes (1016.58 MBPS)
+[5] Edge loading time: 0.006646 seconds to read 6554424 bytes (986.221 MBPS)
+[1] Graph construction complete.
+[3] Graph construction complete.
+[4] Graph construction complete.
+[2] Graph construction complete.
+[5] Graph construction complete.
+[2] InitializeGraph::go called
+[3] InitializeGraph::go called
+[1] InitializeGraph::go called
+[4] InitializeGraph::go called
+[0] InitializeGraph::go called
+[5] InitializeGraph::go called
+[0] SSSP::go run 0 called
+[2] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[3] SSSP::go run 0 called
+[4] SSSP::go run 0 called
+[5] SSSP::go run 0 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06
+[0] SSSP::go run 1 called
+[2] SSSP::go run 1 called
+[4] SSSP::go run 1 called
+[3] SSSP::go run 1 called
+[1] SSSP::go run 1 called
+[5] SSSP::go run 1 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06
+[0] SSSP::go run 2 called
+[1] SSSP::go run 2 called
+[2] SSSP::go run 2 called
+[4] SSSP::go run 2 called
+[3] SSSP::go run 2 called
+[5] SSSP::go run 2 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06

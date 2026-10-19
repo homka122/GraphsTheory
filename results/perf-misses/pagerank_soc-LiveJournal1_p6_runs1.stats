@@ -1,0 +1,31 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 664
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 173
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 59
+STAT, 0, DistBench, GraphConstructTime, HMAX, 1076
+STAT, 0, ResetGraph_0, Time, HMAX, 27
+STAT, 0, InitializeGraph_0, Time, HMAX, 16
+STAT, 0, PageRank_delta_0, Time, HMAX, 2335
+STAT, 0, RESET:MIRRORS_0, Time, HMAX, 1836
+STAT, 0, PageRank_0, Time, HMAX, 19935
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HSUM, 2611888788
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HSUM, 3630
+STAT, 0, Gluon, Sync_PageRank_0, HMAX, 8596
+STAT, 0, PageRank, NumWorkItems_0, HSUM, 224279176
+STAT, 0, PageRank, NumIterations_0, HOST_0, 121
+STAT, 0, PageRank, Timer_0, HMAX, 27488
+STAT, 0, PageRank, TimerTotal, HMAX, 28772
+STAT, 0, PageRankSanity, Time, HMAX, 19
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 3.05022
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr --maxIterations=100000000 --exec=Sync -t=1 --runs=1 --statFile=pagerank_soc-LiveJournal1_p6_runs1.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 6
+PARAM, 0, DistBench, Runs, HOST_0, 1
+PARAM, 0, DistBench, Run_UUID, HOST_0, bf901954-f849-454a-8389-f960125fe262
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, PageRank, Max Iterations, HOST_0, 100000000
+PARAM, 0, PageRank, Tolerance, HOST_0, 1e-06
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0

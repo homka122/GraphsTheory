@@ -1,0 +1,47 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[0] Master distribution time : 0.000769 seconds to read 168 bytes in 20 seeks (0.218466 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.003425 seconds to read 328 bytes in 41 seeks (0.0957664 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.003121 seconds to read 320 bytes in 39 seeks (0.102531 MBPS)
+[2] Starting graph reading.
+[2] Reading graph complete.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[0] Edge inspection time: 0.010135 seconds to read 9285204 bytes (916.152 MBPS)
+[1] Edge inspection time: 0.010905 seconds to read 9292136 bytes (852.099 MBPS)
+[2] Edge inspection time: 0.011964 seconds to read 9399844 bytes (785.677 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.011757 seconds to read 12902272 bytes (1097.41 MBPS)
+[1] Edge loading time: 0.011665 seconds to read 12909208 bytes (1106.66 MBPS)
+[0] Graph construction complete.
+[2] Edge loading time: 0.011654 seconds to read 13016896 bytes (1116.95 MBPS)
+[1] Graph construction complete.
+[2] Graph construction complete.
+[1] InitializeGraph::go called
+[2] InitializeGraph::go called
+[0] InitializeGraph::go called
+[2] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[0] SSSP::go run 0 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06
+[0] SSSP::go run 1 called
+[1] SSSP::go run 1 called
+[2] SSSP::go run 1 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06
+[0] SSSP::go run 2 called
+[1] SSSP::go run 2 called
+[2] SSSP::go run 2 called
+Number of nodes visited from source 316606 is 1070376
+Max distance from source 316606 is 8358516
+Average distances on visited nodes is 2.7009e+06

@@ -1,0 +1,35 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[0] Master distribution time : 0.00078 seconds to read 176 bytes in 21 seeks (0.225641 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.003224 seconds to read 352 bytes in 43 seeks (0.109181 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.003233 seconds to read 352 bytes in 43 seeks (0.108877 MBPS)
+[2] Starting graph reading.
+[2] Reading graph complete.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[2] Edge inspection time: 0.040567 seconds to read 31097796 bytes (766.579 MBPS)
+[0] Edge inspection time: 0.048159 seconds to read 30750816 bytes (638.527 MBPS)
+[1] Edge inspection time: 0.051192 seconds to read 30841788 bytes (602.473 MBPS)
+[2] Edge loading time: 0.04799 seconds to read 42801936 bytes (891.893 MBPS)
+[2] Graph construction complete.
+Loading edge-data while creating edges
+[0] Edge loading time: 0.06959 seconds to read 42454984 bytes (610.073 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.075993 seconds to read 42545936 bytes (559.867 MBPS)
+[1] Graph construction complete.
+[0] InitializeGraph::go called
+[1] InitializeGraph::go called
+[2] InitializeGraph::go called
+[0] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[2] SSSP::go run 0 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06

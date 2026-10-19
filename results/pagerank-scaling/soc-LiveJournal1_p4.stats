@@ -1,0 +1,149 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 732
+STAT, 0, dGraph_Generic, EdgeLoading, HostValues, 651; 670; 732; 551
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, CuSPStateRounds, HostValues, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 201
+STAT, 0, dGraph_Generic, EdgeInspection, HostValues, 113; 126; 148; 201
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 64
+STAT, 0, dGraph_Generic, GraphReading, HostValues, 51; 53; 54; 64
+STAT, 0, DistBench, GraphConstructTime, HMAX, 1226
+STAT, 0, DistBench, GraphConstructTime, HostValues, 1053; 1113; 1226; 1192
+STAT, 0, ResetGraph_0, Time, HMAX, 23
+STAT, 0, ResetGraph_0, Time, HostValues, 13; 15; 16; 23
+STAT, 0, InitializeGraph_0, Time, HMAX, 19
+STAT, 0, InitializeGraph_0, Time, HostValues, 2; 3; 5; 19
+STAT, 0, PageRank_delta_0, Time, HMAX, 1917
+STAT, 0, PageRank_delta_0, Time, HostValues, 73; 196; 452; 1917
+STAT, 0, RESET:MIRRORS_0, Time, HMAX, 1277
+STAT, 0, RESET:MIRRORS_0, Time, HostValues, 1264; 1277; 1165; 290
+STAT, 0, PageRank_0, Time, HMAX, 22711
+STAT, 0, PageRank_0, Time, HostValues, 19140; 19309; 21528; 22711
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HSUM, 1885130808
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HostValues, 549506632; 539312572; 512761336; 283550268
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HSUM, 1452
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HostValues, 363; 363; 363; 363
+STAT, 0, Gluon, Sync_PageRank_0, HMAX, 6403
+STAT, 0, Gluon, Sync_PageRank_0, HostValues, 6403; 6296; 4633; 4046
+STAT, 0, Gluon, ReduceSendBytes_PageRank_1, HSUM, 1885130808
+STAT, 0, Gluon, ReduceSendBytes_PageRank_1, HostValues, 549506632; 539312572; 512761336; 283550268
+STAT, 0, Gluon, ReduceNumMessages_PageRank_1, HSUM, 1452
+STAT, 0, Gluon, ReduceNumMessages_PageRank_1, HostValues, 363; 363; 363; 363
+STAT, 0, Gluon, Sync_PageRank_1, HMAX, 6493
+STAT, 0, Gluon, Sync_PageRank_1, HostValues, 6240; 6493; 4641; 4005
+STAT, 0, Gluon, ReduceSendBytes_PageRank_2, HSUM, 1885130808
+STAT, 0, Gluon, ReduceSendBytes_PageRank_2, HostValues, 549506632; 539312572; 512761336; 283550268
+STAT, 0, Gluon, ReduceNumMessages_PageRank_2, HSUM, 1452
+STAT, 0, Gluon, ReduceNumMessages_PageRank_2, HostValues, 363; 363; 363; 363
+STAT, 0, Gluon, Sync_PageRank_2, HMAX, 6549
+STAT, 0, Gluon, Sync_PageRank_2, HostValues, 6306; 6549; 4617; 4050
+STAT, 0, Gluon, ReduceSendBytes_PageRank_3, HSUM, 1885130808
+STAT, 0, Gluon, ReduceSendBytes_PageRank_3, HostValues, 549506632; 539312572; 512761336; 283550268
+STAT, 0, Gluon, ReduceNumMessages_PageRank_3, HSUM, 1452
+STAT, 0, Gluon, ReduceNumMessages_PageRank_3, HostValues, 363; 363; 363; 363
+STAT, 0, Gluon, Sync_PageRank_3, HMAX, 6514
+STAT, 0, Gluon, Sync_PageRank_3, HostValues, 6356; 6514; 4713; 4047
+STAT, 0, Gluon, ReduceSendBytes_PageRank_4, HSUM, 1885130808
+STAT, 0, Gluon, ReduceSendBytes_PageRank_4, HostValues, 549506632; 539312572; 512761336; 283550268
+STAT, 0, Gluon, ReduceNumMessages_PageRank_4, HSUM, 1452
+STAT, 0, Gluon, ReduceNumMessages_PageRank_4, HostValues, 363; 363; 363; 363
+STAT, 0, Gluon, Sync_PageRank_4, HMAX, 6503
+STAT, 0, Gluon, Sync_PageRank_4, HostValues, 6307; 6503; 4634; 4029
+STAT, 0, PageRank, NumWorkItems_0, HSUM, 224279175
+STAT, 0, PageRank, NumWorkItems_0, HostValues, 19613328; 29638770; 49036071; 125991006
+STAT, 0, PageRank, NumIterations_0, HOST_0, 121
+STAT, 0, PageRank, NumIterations_0, HostValues, 121
+STAT, 0, PageRank, Timer_0, HMAX, 29245
+STAT, 0, PageRank, Timer_0, HostValues, 29245; 29245; 29245; 29245
+STAT, 0, PageRank, NumWorkItems_1, HSUM, 224279175
+STAT, 0, PageRank, NumWorkItems_1, HostValues, 19613328; 29638770; 49036071; 125991006
+STAT, 0, PageRank, NumIterations_1, HOST_0, 121
+STAT, 0, PageRank, NumIterations_1, HostValues, 121
+STAT, 0, PageRank, Timer_1, HMAX, 29219
+STAT, 0, PageRank, Timer_1, HostValues, 29219; 29219; 29219; 29219
+STAT, 0, PageRank, NumWorkItems_2, HSUM, 224279176
+STAT, 0, PageRank, NumWorkItems_2, HostValues, 19613328; 29638770; 49036072; 125991006
+STAT, 0, PageRank, NumIterations_2, HOST_0, 121
+STAT, 0, PageRank, NumIterations_2, HostValues, 121
+STAT, 0, PageRank, Timer_2, HMAX, 29264
+STAT, 0, PageRank, Timer_2, HostValues, 29264; 29264; 29264; 29264
+STAT, 0, PageRank, NumWorkItems_3, HSUM, 224279175
+STAT, 0, PageRank, NumWorkItems_3, HostValues, 19613328; 29638770; 49036071; 125991006
+STAT, 0, PageRank, NumIterations_3, HOST_0, 121
+STAT, 0, PageRank, NumIterations_3, HostValues, 121
+STAT, 0, PageRank, Timer_3, HMAX, 29258
+STAT, 0, PageRank, Timer_3, HostValues, 29258; 29258; 29258; 29258
+STAT, 0, PageRank, NumWorkItems_4, HSUM, 224279175
+STAT, 0, PageRank, NumWorkItems_4, HostValues, 19613328; 29638770; 49036071; 125991006
+STAT, 0, PageRank, NumIterations_4, HOST_0, 121
+STAT, 0, PageRank, NumIterations_4, HostValues, 121
+STAT, 0, PageRank, Timer_4, HMAX, 29262
+STAT, 0, PageRank, Timer_4, HostValues, 29262; 29262; 29262; 29262
+STAT, 0, PageRank, TimerTotal, HMAX, 147884
+STAT, 0, PageRank, TimerTotal, HostValues, 147880; 147884; 147883; 147884
+STAT, 0, PageRankSanity, Time, HMAX, 105
+STAT, 0, PageRankSanity, Time, HostValues, 10; 15; 30; 105
+STAT, 0, ResetGraph_1, Time, HMAX, 20
+STAT, 0, ResetGraph_1, Time, HostValues, 13; 14; 15; 20
+STAT, 0, InitializeGraph_1, Time, HMAX, 19
+STAT, 0, InitializeGraph_1, Time, HostValues, 2; 3; 5; 19
+STAT, 0, PageRank_delta_1, Time, HMAX, 1928
+STAT, 0, PageRank_delta_1, Time, HostValues, 74; 197; 454; 1928
+STAT, 0, RESET:MIRRORS_1, Time, HMAX, 1285
+STAT, 0, RESET:MIRRORS_1, Time, HostValues, 1272; 1285; 1165; 287
+STAT, 0, PageRank_1, Time, HMAX, 22723
+STAT, 0, PageRank_1, Time, HostValues, 19246; 19032; 21496; 22723
+STAT, 0, ResetGraph_2, Time, HMAX, 20
+STAT, 0, ResetGraph_2, Time, HostValues, 13; 14; 15; 20
+STAT, 0, InitializeGraph_2, Time, HMAX, 19
+STAT, 0, InitializeGraph_2, Time, HostValues, 2; 3; 5; 19
+STAT, 0, PageRank_delta_2, Time, HMAX, 1922
+STAT, 0, PageRank_delta_2, Time, HostValues, 73; 198; 454; 1922
+STAT, 0, RESET:MIRRORS_2, Time, HMAX, 1275
+STAT, 0, RESET:MIRRORS_2, Time, HostValues, 1261; 1275; 1156; 285
+STAT, 0, PageRank_2, Time, HMAX, 22725
+STAT, 0, PageRank_2, Time, HostValues, 19251; 19056; 21579; 22725
+STAT, 0, ResetGraph_3, Time, HMAX, 20
+STAT, 0, ResetGraph_3, Time, HostValues, 13; 14; 15; 20
+STAT, 0, InitializeGraph_3, Time, HMAX, 19
+STAT, 0, InitializeGraph_3, Time, HostValues, 2; 3; 5; 19
+STAT, 0, PageRank_delta_3, Time, HMAX, 1919
+STAT, 0, PageRank_delta_3, Time, HostValues, 73; 197; 455; 1919
+STAT, 0, RESET:MIRRORS_3, Time, HMAX, 1290
+STAT, 0, RESET:MIRRORS_3, Time, HostValues, 1271; 1290; 1167; 290
+STAT, 0, PageRank_3, Time, HMAX, 22710
+STAT, 0, PageRank_3, Time, HostValues, 19197; 19066; 21485; 22710
+STAT, 0, ResetGraph_4, Time, HMAX, 20
+STAT, 0, ResetGraph_4, Time, HostValues, 13; 13; 15; 20
+STAT, 0, InitializeGraph_4, Time, HMAX, 19
+STAT, 0, InitializeGraph_4, Time, HostValues, 2; 3; 5; 19
+STAT, 0, PageRank_delta_4, Time, HMAX, 1929
+STAT, 0, PageRank_delta_4, Time, HostValues, 72; 198; 456; 1929
+STAT, 0, RESET:MIRRORS_4, Time, HMAX, 1286
+STAT, 0, RESET:MIRRORS_4, Time, HostValues, 1271; 1286; 1159; 291
+STAT, 0, PageRank_4, Time, HMAX, 22733
+STAT, 0, PageRank_4, Time, HostValues, 19235; 19073; 21548; 22733
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 2.46944
+STAT, 0, Gluon, ReplicationFactor, HostValues, 2.46944
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=5 --statFile=soc-LiveJournal1_p4.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=5 --statFile=soc-LiveJournal1_p4.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 4
+PARAM, 0, DistBench, Hosts, HostValues, 4
+PARAM, 0, DistBench, Runs, HOST_0, 5
+PARAM, 0, DistBench, Runs, HostValues, 5
+PARAM, 0, DistBench, Run_UUID, HOST_0, 63b9bcf5-c7f6-4c92-8830-219763a28b39
+PARAM, 0, DistBench, Run_UUID, HostValues, 63b9bcf5-c7f6-4c92-8830-219763a28b39
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, PageRank, Max Iterations, HOST_0, 100000000
+PARAM, 0, PageRank, Max Iterations, HostValues, 100000000
+PARAM, 0, PageRank, Tolerance, HOST_0, 1e-06
+PARAM, 0, PageRank, Tolerance, HostValues, 1e-06
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0
+PARAM, 0, dGraph, GenericPartitioner, HostValues, 0; 0; 0; 0

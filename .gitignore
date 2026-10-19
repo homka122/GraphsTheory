@@ -1,0 +1,14 @@
+/build/
+/dataset/
+__pycache__/
+# промежуточные файлы LaTeX (talk.pdf хранится в репозитории)
+/talk/*.aux
+/talk/*.fdb_latexmk
+/talk/*.fls
+/talk/*.log
+/talk/*.nav
+/talk/*.out
+/talk/*.snm
+/talk/*.synctex.gz
+/talk/*.toc
+/talk/*.xdv

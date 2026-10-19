@@ -1,0 +1,732 @@
+/*
+ * This file belongs to the Galois project, a C++ library for exploiting
+ * parallelism. The code is being released under the terms of the 3-Clause BSD
+ * License (a copy is located in LICENSE.txt at the top-level directory).
+ *
+ * Copyright (C) 2018, The University of Texas at Austin. All rights reserved.
+ * UNIVERSITY EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES CONCERNING THIS
+ * SOFTWARE AND DOCUMENTATION, INCLUDING ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR ANY PARTICULAR PURPOSE, NON-INFRINGEMENT AND WARRANTIES OF
+ * PERFORMANCE, AND ANY WARRANTY THAT MIGHT OTHERWISE ARISE FROM COURSE OF
+ * DEALING OR USAGE OF TRADE.  NO WARRANTY IS EITHER EXPRESS OR IMPLIED WITH
+ * RESPECT TO THE USE OF THE SOFTWARE OR DOCUMENTATION. Under no circumstances
+ * shall University be liable for incidental, special, indirect, direct or
+ * consequential damages or loss of profits, interruption of business, or
+ * related expenses which may arise from use of Software or Documentation,
+ * including but not limited to those resulting from defects in Software and/or
+ * Documentation, or loss or inaccuracy of data of any kind.
+ */
+
+#include "DistBench/Output.h"
+#include "DistBench/Start.h"
+#include "galois/DistGalois.h"
+#include "galois/gstl.h"
+#include "galois/DReducible.h"
+#include "galois/DTerminationDetector.h"
+#include "galois/runtime/Tracer.h"
+
+#include <algorithm>
+#include <chrono>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <vector>
+
+#ifdef GALOIS_ENABLE_GPU
+#include "bfs_push_cuda.h"
+struct CUDA_Context* cuda_ctx;
+#else
+enum { CPU, GPU_CUDA };
+int personality = CPU;
+#endif
+
+constexpr static const char* const REGION_NAME = "BFS";
+
+/******************************************************************************/
+/* Declaration of command line arguments */
+/******************************************************************************/
+
+namespace cll = llvm::cl;
+
+static cll::opt<unsigned int> maxIterations("maxIterations",
+                                            cll::desc("Maximum iterations: "
+                                                      "Default 1000"),
+                                            cll::init(1000));
+
+static cll::opt<uint64_t>
+    src_node("startNode", cll::desc("ID of the source node"), cll::init(0));
+
+static cll::opt<uint32_t>
+    delta("delta",
+          cll::desc("Shift value for the delta step (default value 0)"),
+          cll::init(0));
+
+enum Exec { Sync, Async };
+
+static cll::opt<Exec> execution(
+    "exec", cll::desc("Distributed Execution Model (default value Async):"),
+    cll::values(clEnumVal(Sync, "Bulk-synchronous Parallel (BSP)"),
+                clEnumVal(Async, "Bulk-asynchronous Parallel (BASP)")),
+    cll::init(Async));
+
+static cll::opt<std::string>
+    phaseLog("phaseLog",
+             cll::desc("Prefix of per-host phase timing CSV files "
+                       "(<prefix>.host<ID>.csv), default \"phases\""),
+             cll::init("phases"));
+
+static cll::opt<bool> explicitBarrier(
+    "explicitBarrier",
+    cll::desc("Put a host barrier between compute and sync to time the wait "
+              "directly (changes overlap of compute and communication); by "
+              "default the wait is derived from per-host timestamps"),
+    cll::init(false));
+
+static cll::opt<unsigned>
+    scanReps("scanReps",
+             cll::desc("Idle passes used to calibrate the cost of scanning "
+                       "all vertices without work (default 5)"),
+             cll::init(5));
+
+/******************************************************************************/
+/* Graph structure declarations + other initialization */
+/******************************************************************************/
+
+const uint32_t infinity = std::numeric_limits<uint32_t>::max() / 4;
+
+struct NodeData {
+  std::atomic<uint32_t> dist_current;
+  uint32_t dist_old;
+};
+
+galois::DynamicBitSet bitset_dist_current;
+
+typedef galois::graphs::DistGraph<NodeData, void> Graph;
+typedef typename Graph::GraphNode GNode;
+
+std::unique_ptr<galois::graphs::GluonSubstrate<Graph>> syncSubstrate;
+
+#include "bfs_push_sync.hh"
+
+/******************************************************************************/
+/* Phase profiling */
+/******************************************************************************/
+
+// One record per BSP round on this host. Round 0 is FirstItr.
+// compute: do_all wall time; barrier: explicit host barrier (only with
+// --explicitBarrier, else 0); sync: Gluon sync; term: global reduce of the
+// active-vertex counter. The t_* fields are absolute steady_clock times in
+// microseconds: all hosts on one machine share this clock, so waiting for the
+// slowest host can be derived afterwards without an extra barrier.
+struct RoundRecord {
+  unsigned run;
+  unsigned round;
+  double compute_us;
+  double barrier_us;
+  double sync_us;
+  double term_us;
+  uint64_t active;
+  uint64_t edges;
+  double t_start_us;
+  double t_compute_end_us;
+  double t_sync_end_us;
+  double t_term_end_us;
+};
+
+std::vector<RoundRecord> roundLog;
+double scanCostUs = 0; // median wall time of a do_all where no vertex is active
+
+
+using Clock = std::chrono::steady_clock;
+
+static double usSince(Clock::time_point t0) {
+  return std::chrono::duration<double, std::micro>(Clock::now() - t0).count();
+}
+
+static double usBetween(Clock::time_point a, Clock::time_point b) {
+  return std::chrono::duration<double, std::micro>(b - a).count();
+}
+
+static double absUs(Clock::time_point t) {
+  return std::chrono::duration<double, std::micro>(t.time_since_epoch()).count();
+}
+
+// Optional explicit barrier after compute; returns its wall time in us.
+static double maybeBarrier() {
+  if (!explicitBarrier)
+    return 0.0;
+  auto t0 = Clock::now();
+  galois::runtime::getHostBarrier().wait();
+  return usSince(t0);
+}
+
+#ifdef PROF_DIRECT
+// Direct measurement of the edge loop of active vertices with the TSC.
+// Single-thread only: one plain counter, no synchronization.
+#include <thread>
+#include <x86intrin.h>
+uint64_t directCycles = 0;
+uint64_t directCalls  = 0;
+
+// TSC ticks per millisecond and the cost of one empty rdtsc pair, in ticks.
+static std::pair<double, double> calibrateTsc() {
+  auto t0     = Clock::now();
+  uint64_t c0 = __rdtsc();
+  std::this_thread::sleep_for(std::chrono::milliseconds(300));
+  double perMs = (__rdtsc() - c0) / (usSince(t0) / 1000.0);
+
+  const int reps  = 1000000;
+  uint64_t sink   = 0;
+  uint64_t start  = __rdtsc();
+  for (int i = 0; i < reps; ++i) {
+    uint64_t a = __rdtsc();
+    sink += __rdtsc() - a;
+  }
+  double pair = double(__rdtsc() - start) / reps;
+  if (sink == 0)
+    galois::gPrint("");
+  return {perMs, pair};
+}
+#endif
+
+/******************************************************************************/
+/* Algorithm structures */
+/******************************************************************************/
+
+struct InitializeGraph {
+  const uint32_t& local_infinity;
+  cll::opt<uint64_t>& local_src_node;
+  Graph* graph;
+
+  InitializeGraph(cll::opt<uint64_t>& _src_node, const uint32_t& _infinity,
+                  Graph* _graph)
+      : local_infinity(_infinity), local_src_node(_src_node), graph(_graph) {}
+
+  void static go(Graph& _graph) {
+    const auto& allNodes = _graph.allNodesRange();
+
+    if (personality == GPU_CUDA) {
+#ifdef GALOIS_ENABLE_GPU
+      std::string impl_str(
+          syncSubstrate->get_run_identifier("InitializeGraph_"));
+      galois::StatTimer StatTimer_cuda(impl_str.c_str(), REGION_NAME);
+      StatTimer_cuda.start();
+      InitializeGraph_allNodes_cuda(infinity, src_node, cuda_ctx);
+      StatTimer_cuda.stop();
+#else
+      abort();
+#endif
+    } else if (personality == CPU) {
+      galois::do_all(
+          galois::iterate(allNodes.begin(), allNodes.end()),
+          InitializeGraph{src_node, infinity, &_graph}, galois::no_stats(),
+          galois::loopname(
+              syncSubstrate->get_run_identifier("InitializeGraph").c_str()));
+    }
+  }
+
+  void operator()(GNode src) const {
+    NodeData& sdata = graph->getData(src);
+    sdata.dist_current =
+        (graph->getGID(src) == local_src_node) ? 0 : local_infinity;
+    sdata.dist_old =
+        (graph->getGID(src) == local_src_node) ? 0 : local_infinity;
+  }
+};
+
+template <bool async>
+struct FirstItr_BFS {
+  Graph* graph;
+
+  FirstItr_BFS(Graph* _graph) : graph(_graph) {}
+
+  void static go(Graph& _graph) {
+    uint32_t __begin, __end;
+    if (_graph.isLocal(src_node)) {
+      __begin = _graph.getLID(src_node);
+      __end   = __begin + 1;
+    } else {
+      __begin = 0;
+      __end   = 0;
+    }
+    syncSubstrate->set_num_round(0);
+    auto tStart = Clock::now();
+    if (personality == GPU_CUDA) {
+#ifdef GALOIS_ENABLE_GPU
+      std::string impl_str(syncSubstrate->get_run_identifier("BFS"));
+      galois::StatTimer StatTimer_cuda(impl_str.c_str(), REGION_NAME);
+      StatTimer_cuda.start();
+      FirstItr_BFS_cuda(__begin, __end, cuda_ctx);
+      StatTimer_cuda.stop();
+#else
+      abort();
+#endif
+    } else if (personality == CPU) {
+      // one node
+      galois::do_all(
+          galois::iterate(__begin, __end), FirstItr_BFS{&_graph},
+          galois::no_stats(),
+          galois::loopname(syncSubstrate->get_run_identifier("BFS").c_str()));
+    }
+    auto tCompute  = Clock::now();
+    double barrier = maybeBarrier();
+
+    auto tSyncStart = Clock::now();
+    syncSubstrate->sync<writeDestination, readSource, Reduce_min_dist_current,
+                        Bitset_dist_current, async>("BFS");
+    auto tSync = Clock::now();
+
+    uint64_t edges = 0;
+    if (__end > __begin) {
+      GNode src = __begin;
+      edges     = *_graph.edge_end(src) - *_graph.edge_begin(src);
+    }
+    roundLog.push_back({syncSubstrate->get_run_num(), 0, usBetween(tStart, tCompute),
+                        barrier, usBetween(tSyncStart, tSync), 0.0,
+                        (uint64_t)(__end - __begin), edges, absUs(tStart),
+                        absUs(tCompute), absUs(tSync), absUs(tSync)});
+
+    galois::runtime::reportStat_Tsum(
+        REGION_NAME, syncSubstrate->get_run_identifier("NumWorkItems"),
+        __end - __begin);
+  }
+
+  void operator()(GNode src) const {
+    NodeData& snode = graph->getData(src);
+    snode.dist_old  = snode.dist_current;
+
+    for (auto jj : graph->edges(src)) {
+      GNode dst         = graph->getEdgeDst(jj);
+      auto& dnode       = graph->getData(dst);
+      uint32_t new_dist = 1 + snode.dist_current;
+      uint32_t old_dist = galois::atomicMin(dnode.dist_current, new_dist);
+      if (old_dist > new_dist)
+        bitset_dist_current.set(dst);
+    }
+  }
+};
+
+template <bool async>
+struct BFS {
+  uint32_t local_priority;
+  Graph* graph;
+  using DGTerminatorDetector =
+      typename std::conditional<async, galois::DGTerminator<unsigned int>,
+                                galois::DGAccumulator<unsigned int>>::type;
+  using DGAccumulatorTy = galois::DGAccumulator<unsigned int>;
+
+  DGTerminatorDetector& active_vertices;
+  DGAccumulatorTy& work_edges;
+
+  BFS(uint32_t _local_priority, Graph* _graph, DGTerminatorDetector& _dga,
+      DGAccumulatorTy& _work_edges)
+      : local_priority(_local_priority), graph(_graph), active_vertices(_dga),
+        work_edges(_work_edges) {}
+
+  void static go(Graph& _graph) {
+    FirstItr_BFS<async>::go(_graph);
+
+    unsigned _num_iterations = 1;
+
+    const auto& nodesWithEdges = _graph.allNodesWithEdgesRange();
+
+    uint32_t priority;
+    if (delta == 0)
+      priority = std::numeric_limits<uint32_t>::max();
+    else
+      priority = 0;
+    DGTerminatorDetector dga;
+    DGAccumulatorTy work_edges;
+    bool more = false;
+
+    do {
+
+      // if (work_edges.reduce() == 0)
+      priority += delta;
+
+      syncSubstrate->set_num_round(_num_iterations);
+      dga.reset();
+      work_edges.reset();
+      auto tStart = Clock::now();
+      if (personality == GPU_CUDA) {
+#ifdef GALOIS_ENABLE_GPU
+        std::string impl_str(syncSubstrate->get_run_identifier("BFS"));
+        galois::StatTimer StatTimer_cuda(impl_str.c_str(), REGION_NAME);
+        StatTimer_cuda.start();
+        unsigned int __retval  = 0;
+        unsigned int __retval2 = 0;
+        BFS_nodesWithEdges_cuda(__retval, __retval2, priority, cuda_ctx);
+        dga += __retval;
+        work_edges += __retval2;
+        StatTimer_cuda.stop();
+#else
+        abort();
+#endif
+      } else if (personality == CPU) {
+        galois::do_all(
+            galois::iterate(nodesWithEdges),
+            BFS(priority, &_graph, dga, work_edges), galois::steal(),
+            galois::no_stats(),
+            galois::loopname(syncSubstrate->get_run_identifier("BFS").c_str()));
+      }
+      auto tCompute  = Clock::now();
+      double barrier = maybeBarrier();
+
+      auto tSyncStart = Clock::now();
+      syncSubstrate->sync<writeDestination, readSource, Reduce_min_dist_current,
+                          Bitset_dist_current, async>("BFS");
+      auto tSync = Clock::now();
+
+      uint64_t localActive = dga.read_local();
+      uint64_t localEdges  = work_edges.read_local();
+      galois::runtime::reportStat_Tsum(
+          REGION_NAME, syncSubstrate->get_run_identifier("NumWorkItems"),
+          (unsigned long)localEdges);
+
+      auto tTermStart = Clock::now();
+      more            = dga.reduce(syncSubstrate->get_run_identifier());
+      auto tTerm      = Clock::now();
+
+      roundLog.push_back({syncSubstrate->get_run_num(), _num_iterations,
+                          usBetween(tStart, tCompute), barrier,
+                          usBetween(tSyncStart, tSync),
+                          usBetween(tTermStart, tTerm), localActive, localEdges,
+                          absUs(tStart), absUs(tCompute), absUs(tSync),
+                          absUs(tTerm)});
+
+      ++_num_iterations;
+    } while ((async || (_num_iterations < maxIterations)) && more);
+
+    galois::runtime::reportStat_Tmax(
+        REGION_NAME,
+        "NumIterations_" + std::to_string(syncSubstrate->get_run_num()),
+        (unsigned long)_num_iterations);
+  }
+
+  void operator()(GNode src) const {
+    NodeData& snode = graph->getData(src);
+
+    if (snode.dist_old > snode.dist_current) {
+      active_vertices += 1;
+
+      if (local_priority > snode.dist_current) {
+#ifdef PROF_DIRECT
+        uint64_t c0 = __rdtsc();
+#endif
+        snode.dist_old = snode.dist_current;
+
+        for (auto jj : graph->edges(src)) {
+          // Ablation switches for single-host, single-thread cost analysis:
+          // PROF_NO_WORKCOUNT drops the per-edge statistics counter,
+          // PROF_PLAIN_MIN replaces the CAS loop with a plain load/store,
+          // PROF_NO_BITSET skips marking updated vertices for Gluon.
+          // The last two are only correct with one host and one thread.
+#ifndef PROF_NO_WORKCOUNT
+          work_edges += 1;
+#endif
+
+          GNode dst         = graph->getEdgeDst(jj);
+          auto& dnode       = graph->getData(dst);
+          uint32_t new_dist = 1 + snode.dist_current;
+#ifdef PROF_PLAIN_MIN
+          uint32_t old_dist = dnode.dist_current.load(std::memory_order_relaxed);
+          if (old_dist > new_dist)
+            dnode.dist_current.store(new_dist, std::memory_order_relaxed);
+#else
+          uint32_t old_dist = galois::atomicMin(dnode.dist_current, new_dist);
+#endif
+#ifndef PROF_NO_BITSET
+          if (old_dist > new_dist)
+            bitset_dist_current.set(dst);
+#endif
+        }
+#ifdef PROF_DIRECT
+        directCycles += __rdtsc() - c0;
+        ++directCalls;
+#endif
+      }
+    }
+  }
+};
+
+/******************************************************************************/
+/* Profiling helpers */
+/******************************************************************************/
+
+// Runs the round do_all right after InitializeGraph, when dist_old ==
+// dist_current for every vertex: each call only evaluates the activity check.
+// The median of these idle passes is the cost of the empty checks per round.
+void calibrateScanCost(Graph& _graph) {
+  const auto& nodesWithEdges = _graph.allNodesWithEdgesRange();
+  galois::DGAccumulator<unsigned int> dga;
+  galois::DGAccumulator<unsigned int> work_edges;
+  std::vector<double> samples;
+  dga.reset();
+  work_edges.reset();
+
+  for (unsigned rep = 0; rep < std::max(1u, (unsigned)scanReps); ++rep) {
+    auto t0 = Clock::now();
+    galois::do_all(galois::iterate(nodesWithEdges),
+                   BFS<false>(std::numeric_limits<uint32_t>::max(), &_graph,
+                              dga, work_edges),
+                   galois::steal(), galois::no_stats(),
+                   galois::loopname("BFS_scan_calibration"));
+    samples.push_back(usSince(t0));
+  }
+  if (dga.read_local() != 0) {
+    GALOIS_DIE("scan calibration found active vertices; it must run right "
+               "after InitializeGraph");
+  }
+  std::sort(samples.begin(), samples.end());
+  scanCostUs = samples[samples.size() / 2];
+}
+
+void writePhaseLog(Graph& _graph) {
+  const auto& net = galois::runtime::getSystemNetworkInterface();
+  std::string fname =
+      std::string(phaseLog) + ".host" + std::to_string(net.ID) + ".csv";
+  std::ofstream out(fname);
+  out << "# host=" << net.ID << " hosts=" << net.Num
+      << " threads=" << galois::getActiveThreads()
+      << " masters=" << _graph.numMasters()
+      << " mirrors=" << (_graph.size() - _graph.numMasters())
+      << " nodes_with_edges=" << _graph.getNumNodesWithEdges()
+      << " local_edges=" << _graph.sizeEdges() << " scan_us=" << scanCostUs
+      << " start_node=" << (uint64_t)src_node << " delta=" << (uint32_t)delta
+      << " explicit_barrier=" << (explicitBarrier ? 1 : 0) << "\n";
+  out << "run,round,compute_us,barrier_us,sync_us,term_us,active,edges,"
+         "t_start_us,t_compute_end_us,t_sync_end_us,t_term_end_us\n";
+  out << std::fixed << std::setprecision(3);
+  for (const auto& r : roundLog) {
+    out << r.run << "," << r.round << "," << r.compute_us << ","
+        << r.barrier_us << "," << r.sync_us << "," << r.term_us << ","
+        << r.active << "," << r.edges << "," << r.t_start_us << ","
+        << r.t_compute_end_us << "," << r.t_sync_end_us << ","
+        << r.t_term_end_us << "\n";
+  }
+}
+
+/******************************************************************************/
+/* Sanity check operators */
+/******************************************************************************/
+
+/* Prints total number of nodes visited + max distance */
+struct BFSSanityCheck {
+  const uint32_t& local_infinity;
+  Graph* graph;
+
+  galois::DGAccumulator<uint64_t>& DGAccumulator_sum;
+  galois::DGReduceMax<uint32_t>& DGMax;
+
+  BFSSanityCheck(const uint32_t& _infinity, Graph* _graph,
+                 galois::DGAccumulator<uint64_t>& dgas,
+                 galois::DGReduceMax<uint32_t>& dgm)
+      : local_infinity(_infinity), graph(_graph), DGAccumulator_sum(dgas),
+        DGMax(dgm) {}
+
+  void static go(Graph& _graph, galois::DGAccumulator<uint64_t>& dgas,
+                 galois::DGReduceMax<uint32_t>& dgm) {
+    dgas.reset();
+    dgm.reset();
+
+    if (personality == GPU_CUDA) {
+#ifdef GALOIS_ENABLE_GPU
+      uint64_t sum;
+      uint32_t max;
+      BFSSanityCheck_masterNodes_cuda(sum, max, infinity, cuda_ctx);
+      dgas += sum;
+      dgm.update(max);
+#else
+      abort();
+#endif
+    } else {
+      galois::do_all(galois::iterate(_graph.masterNodesRange().begin(),
+                                     _graph.masterNodesRange().end()),
+                     BFSSanityCheck(infinity, &_graph, dgas, dgm),
+                     galois::no_stats(), galois::loopname("BFSSanityCheck"));
+    }
+
+    uint64_t num_visited  = dgas.reduce();
+    uint32_t max_distance = dgm.reduce();
+
+    // Only host 0 will print the info
+    if (galois::runtime::getSystemNetworkInterface().ID == 0) {
+      galois::gPrint("Number of nodes visited from source ", src_node, " is ",
+                     num_visited, "\n");
+      galois::gPrint("Max distance from source ", src_node, " is ",
+                     max_distance, "\n");
+    }
+  }
+
+  void operator()(GNode src) const {
+    NodeData& src_data = graph->getData(src);
+
+    if (src_data.dist_current < local_infinity) {
+      DGAccumulator_sum += 1;
+      DGMax.update(src_data.dist_current);
+    }
+  }
+};
+
+/******************************************************************************/
+/* Make results */
+/******************************************************************************/
+
+std::vector<uint32_t> makeResultsCPU(std::unique_ptr<Graph>& hg) {
+  std::vector<uint32_t> values;
+
+  values.reserve(hg->numMasters());
+  for (auto node : hg->masterNodesRange()) {
+    values.push_back(hg->getData(node).dist_current);
+  }
+
+  return values;
+}
+
+#ifdef GALOIS_ENABLE_GPU
+std::vector<uint32_t> makeResultsGPU(std::unique_ptr<Graph>& hg) {
+  std::vector<uint32_t> values;
+
+  values.reserve(hg->numMasters());
+  for (auto node : hg->masterNodesRange()) {
+    values.push_back(get_node_dist_current_cuda(cuda_ctx, node));
+  }
+
+  return values;
+}
+#else
+std::vector<uint32_t> makeResultsGPU(std::unique_ptr<Graph>& /*unused*/) {
+  abort();
+}
+#endif
+
+std::vector<uint32_t> makeResults(std::unique_ptr<Graph>& hg) {
+  switch (personality) {
+  case CPU:
+    return makeResultsCPU(hg);
+  case GPU_CUDA:
+    return makeResultsGPU(hg);
+  default:
+    abort();
+  }
+}
+
+/******************************************************************************/
+/* Main */
+/******************************************************************************/
+
+constexpr static const char* const name =
+    "BFS - Distributed Heterogeneous with "
+    "worklist, per-round phase profiling.";
+constexpr static const char* const desc =
+    "BFS on Distributed Galois; writes compute/barrier/sync/term time per "
+    "round and host to <phaseLog>.host<ID>.csv.";
+constexpr static const char* const url  = nullptr;
+
+int main(int argc, char** argv) {
+  galois::DistMemSys G;
+  DistBenchStart(argc, argv, name, desc, url);
+
+  const auto& net = galois::runtime::getSystemNetworkInterface();
+  if (net.ID == 0) {
+    galois::runtime::reportParam(REGION_NAME, "Max Iterations", maxIterations);
+    galois::runtime::reportParam(REGION_NAME, "Source Node ID", src_node);
+  }
+
+  galois::StatTimer StatTimer_total("TimerTotal", REGION_NAME);
+
+  StatTimer_total.start();
+
+  std::unique_ptr<Graph> hg;
+#ifdef GALOIS_ENABLE_GPU
+  std::tie(hg, syncSubstrate) =
+      distGraphInitialization<NodeData, void>(&cuda_ctx);
+#else
+  std::tie(hg, syncSubstrate) = distGraphInitialization<NodeData, void>();
+#endif
+  // bitset comm setup
+  bitset_dist_current.resize(hg->size());
+
+  galois::gPrint("[", net.ID, "] InitializeGraph::go called\n");
+
+  if (execution != Sync) {
+    GALOIS_DIE("phase profiling needs --exec=Sync: the extra barrier would "
+               "change what BASP measures");
+  }
+
+  InitializeGraph::go((*hg));
+  galois::runtime::getHostBarrier().wait();
+
+  calibrateScanCost(*hg);
+  galois::runtime::getHostBarrier().wait();
+#ifdef PROF_DIRECT
+  if (net.Num != 1 || galois::getActiveThreads() != 1) {
+    GALOIS_DIE("PROF_DIRECT build needs exactly one host and one thread");
+  }
+  auto tsc = calibrateTsc();
+#endif
+
+  // accumulators for use in operators
+  galois::DGAccumulator<uint64_t> DGAccumulator_sum;
+  galois::DGReduceMax<uint32_t> m;
+
+  for (auto run = 0; run < numRuns; ++run) {
+    galois::gPrint("[", net.ID, "] BFS::go run ", run, " called\n");
+    std::string timer_str("Timer_" + std::to_string(run));
+    galois::StatTimer StatTimer_main(timer_str.c_str(), REGION_NAME);
+
+#ifdef PROF_DIRECT
+    directCycles = 0;
+    directCalls  = 0;
+#endif
+    StatTimer_main.start();
+    if (execution == Async) {
+      BFS<true>::go(*hg);
+    } else {
+      BFS<false>::go(*hg);
+    }
+    StatTimer_main.stop();
+#ifdef PROF_DIRECT
+    if (net.ID == 0) {
+      galois::gPrint("DIRECT run=", run, " useful_ms=", directCycles / tsc.first,
+                     " active_vertices=", directCalls, " rdtsc_overhead_ms=",
+                     directCalls * tsc.second / tsc.first, "\n");
+    }
+#endif
+
+    // sanity check
+    BFSSanityCheck::go(*hg, DGAccumulator_sum, m);
+
+    if ((run + 1) != numRuns) {
+      if (personality == GPU_CUDA) {
+#ifdef GALOIS_ENABLE_GPU
+        bitset_dist_current_reset_cuda(cuda_ctx);
+#else
+        abort();
+#endif
+      } else {
+        bitset_dist_current.reset();
+      }
+
+      syncSubstrate->set_num_run(run + 1);
+      InitializeGraph::go((*hg));
+      galois::runtime::getHostBarrier().wait();
+    }
+  }
+
+  StatTimer_total.stop();
+
+  writePhaseLog(*hg);
+
+  if (output) {
+    std::vector<uint32_t> results = makeResults(hg);
+    auto globalIDs                = hg->getMasterGlobalIDs();
+    assert(results.size() == globalIDs.size());
+
+    writeOutput(outputLocation, "level", results.data(), results.size(),
+                globalIDs.data());
+  }
+
+  return 0;
+}

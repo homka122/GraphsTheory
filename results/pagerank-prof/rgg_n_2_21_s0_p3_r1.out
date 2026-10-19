@@ -1,0 +1,39 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: PageRank - Compiler Generated Distributed Heterogeneous, per-round phase profiling
+Residual PageRank on Distributed Galois; writes per-round phase times and useful/empty master counts per host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.000766 seconds to read 176 bytes in 21 seeks (0.229765 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.003158 seconds to read 344 bytes in 43 seeks (0.10893 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.003412 seconds to read 336 bytes in 41 seeks (0.098476 MBPS)
+[2] Starting graph reading.
+[2] Reading graph complete.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[0] Edge inspection time: 0.050382 seconds to read 49820728 bytes (988.86 MBPS)
+[1] Edge inspection time: 0.056495 seconds to read 49832476 bytes (882.069 MBPS)
+[2] Edge inspection time: 0.064417 seconds to read 49805164 bytes (773.168 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.065496 seconds to read 49820728 bytes (760.668 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.065431 seconds to read 49832476 bytes (761.603 MBPS)
+[1] Graph construction complete.
+[2] Edge loading time: 0.065409 seconds to read 49805164 bytes (761.442 MBPS)
+[2] Graph construction complete.
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[1] PageRank::go run 0 called
+[2] PageRank::go run 0 called
+[0] PageRank::go run 0 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09715e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0

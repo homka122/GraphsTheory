@@ -1,0 +1,40 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 1
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 2
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 1
+STAT, 0, DistBench, GraphConstructTime, HMAX, 25
+STAT, 0, Gluon, ReduceSendBytes_SSSP_0, HSUM, 2396480
+STAT, 0, Gluon, ReduceNumMessages_SSSP_0, HSUM, 11024
+STAT, 0, Gluon, Sync_SSSP_0, HMAX, 1309
+STAT, 0, Gluon, ReduceSendBytes_SSSP_1, HSUM, 2396480
+STAT, 0, Gluon, ReduceNumMessages_SSSP_1, HSUM, 11024
+STAT, 0, Gluon, Sync_SSSP_1, HMAX, 2371
+STAT, 0, Gluon, ReduceSendBytes_SSSP_2, HSUM, 2396480
+STAT, 0, Gluon, ReduceNumMessages_SSSP_2, HSUM, 11024
+STAT, 0, Gluon, Sync_SSSP_2, HMAX, 1373
+STAT, 0, SSSP, NumWorkItems_0, HSUM, 55526283
+STAT, 0, SSSP, NumIterations_0, HMAX, 424
+STAT, 0, SSSP, Timer_0, HMAX, 2627
+STAT, 0, SSSP, NumWorkItems_1, HSUM, 55526283
+STAT, 0, SSSP, NumIterations_1, HMAX, 424
+STAT, 0, SSSP, Timer_1, HMAX, 4772
+STAT, 0, SSSP, NumWorkItems_2, HSUM, 55526283
+STAT, 0, SSSP, NumIterations_2, HMAX, 424
+STAT, 0, SSSP, Timer_2, HMAX, 3037
+STAT, 0, SSSP, TimerTotal, HMAX, 10470
+STAT, 0, SSSP_0, Time, HMAX, 24
+STAT, 0, SSSP_1, Time, HMAX, 123
+STAT, 0, SSSP_2, Time, HMAX, 21
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.0215
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/lonestar/analytics/distributed/sssp/sssp-push-dist /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.NY/USA-road-d.NY.gr --exec=Sync --delta=0 --startNode=140960 -t=1 --runs=3 --maxIterations=100000000 --statFile=NY_p6_d0.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 6
+PARAM, 0, DistBench, Runs, HOST_0, 3
+PARAM, 0, DistBench, Run_UUID, HOST_0, 0197016a-1830-4201-a2c6-3674a3aea15c
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/USA-road-d.NY/USA-road-d.NY.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, SSSP, Max Iterations, HOST_0, 100000000
+PARAM, 0, SSSP, Source Node ID, HOST_0, 140960
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0

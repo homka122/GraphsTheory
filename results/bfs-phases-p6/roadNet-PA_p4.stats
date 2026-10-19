@@ -1,0 +1,45 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 7
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 10
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 4
+STAT, 0, DistBench, GraphConstructTime, HMAX, 50
+STAT, 0, InitializeGraph_0, Time, HMAX, 1
+STAT, 0, Gluon, ReduceSendBytes_BFS_0, HSUM, 246032
+STAT, 0, Gluon, ReduceNumMessages_BFS_0, HSUM, 7140
+STAT, 0, Gluon, ReduceSendBytes_BFS_1, HSUM, 246032
+STAT, 0, Gluon, ReduceNumMessages_BFS_1, HSUM, 7140
+STAT, 0, Gluon, ReduceSendBytes_BFS_2, HSUM, 246032
+STAT, 0, Gluon, ReduceNumMessages_BFS_2, HSUM, 7140
+STAT, 0, Gluon, ReduceSendBytes_BFS_3, HSUM, 246032
+STAT, 0, Gluon, ReduceNumMessages_BFS_3, HSUM, 7140
+STAT, 0, Gluon, ReduceSendBytes_BFS_4, HSUM, 246032
+STAT, 0, Gluon, ReduceNumMessages_BFS_4, HSUM, 7140
+STAT, 0, BFS, NumWorkItems_0, HSUM, 3083020
+STAT, 0, BFS, NumIterations_0, HMAX, 595
+STAT, 0, BFS, Timer_0, HMAX, 229
+STAT, 0, BFS, NumWorkItems_1, HSUM, 3083020
+STAT, 0, BFS, NumIterations_1, HMAX, 595
+STAT, 0, BFS, Timer_1, HMAX, 228
+STAT, 0, BFS, NumWorkItems_2, HSUM, 3083020
+STAT, 0, BFS, NumIterations_2, HMAX, 595
+STAT, 0, BFS, Timer_2, HMAX, 228
+STAT, 0, BFS, NumWorkItems_3, HSUM, 3083020
+STAT, 0, BFS, NumIterations_3, HMAX, 595
+STAT, 0, BFS, Timer_3, HMAX, 228
+STAT, 0, BFS, NumWorkItems_4, HSUM, 3083020
+STAT, 0, BFS, NumIterations_4, HMAX, 595
+STAT, 0, BFS, Timer_4, HMAX, 228
+STAT, 0, BFS, TimerTotal, HMAX, 1207
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.01467
+PARAM, 0, DistBench, CommandLine, HOST_0, ../../build/bin/bfs-push-prof-dist ../../dataset/roadNet-PA/roadNet-PA.gr --exec=Sync --delta=1 --startNode=674502 -t=1 --runs=5 --phaseLog=roadNet-PA_p4 --statFile=roadNet-PA_p4.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 4
+PARAM, 0, DistBench, Runs, HOST_0, 5
+PARAM, 0, DistBench, Run_UUID, HOST_0, 5fa72311-9fe5-4ce8-85ba-18288220c4ae
+PARAM, 0, DistBench, Input, HOST_0, ../../dataset/roadNet-PA/roadNet-PA.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, BFS, Max Iterations, HOST_0, 1000
+PARAM, 0, BFS, Source Node ID, HOST_0, 674502
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0

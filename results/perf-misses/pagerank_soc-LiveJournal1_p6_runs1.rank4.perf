@@ -1,0 +1,7 @@
+# started on Tue Oct 20 13:41:33 2026
+
+235092375833,,cycles:u,57412887532,100.00,,
+247169198161,,instructions:u,57412887532,100.00,,
+496370341,,ls_dmnd_fills_from_sys.lcl_l2:u,57412887532,100.00,,
+186983728,,ls_dmnd_fills_from_sys.int_cache:u,57412887532,100.00,,
+266862829,,ls_dmnd_fills_from_sys.mem_io_local:u,57412887532,100.00,,

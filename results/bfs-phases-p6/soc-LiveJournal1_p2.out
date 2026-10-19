@@ -1,0 +1,42 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist, per-round phase profiling.
+BFS on Distributed Galois; writes compute/barrier/sync/term time per round and host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.000815 seconds to read 184 bytes in 23 seeks (0.225767 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.002371 seconds to read 360 bytes in 45 seeks (0.151835 MBPS)
+[1] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[0] Edge inspection time: 0.197787 seconds to read 151364940 bytes (765.293 MBPS)
+[1] Edge inspection time: 0.270601 seconds to read 202171272 bytes (747.119 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.618879 seconds to read 151364940 bytes (244.579 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.615639 seconds to read 202171272 bytes (328.393 MBPS)
+[1] Graph construction complete.
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[0] BFS::go run 0 called
+[1] BFS::go run 0 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 1 called
+[1] BFS::go run 1 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 2 called
+[1] BFS::go run 2 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 3 called
+[1] BFS::go run 3 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 4 called
+[1] BFS::go run 4 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13

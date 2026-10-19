@@ -1,0 +1,91 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: PageRank - Compiler Generated Distributed Heterogeneous
+Residual PageRank on Distributed Galois.
+
+[0] Master distribution time : 0.000971 seconds to read 192 bytes in 23 seeks (0.197734 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.003477 seconds to read 376 bytes in 46 seeks (0.108139 MBPS)
+[1] Starting graph reading.
+[3] Master distribution time : 0.003648 seconds to read 360 bytes in 43 seeks (0.0986842 MBPS)
+[3] Starting graph reading.
+[2] Master distribution time : 0.003201 seconds to read 368 bytes in 45 seeks (0.114964 MBPS)
+[2] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[3] Reading graph complete.
+[0] Edge inspection time: 0.113463 seconds to read 74202452 bytes (653.979 MBPS)
+[1] Edge inspection time: 0.126074 seconds to read 77162480 bytes (612.041 MBPS)
+[2] Edge inspection time: 0.148726 seconds to read 83458432 bytes (561.156 MBPS)
+[3] Edge inspection time: 0.201707 seconds to read 118712832 bytes (588.541 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.651908 seconds to read 74202452 bytes (113.823 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.670924 seconds to read 77162480 bytes (115.009 MBPS)
+[1] Graph construction complete.
+[3] Edge loading time: 0.551915 seconds to read 118712832 bytes (215.093 MBPS)
+[3] Graph construction complete.
+[2] Edge loading time: 0.732191 seconds to read 83458432 bytes (113.985 MBPS)
+[2] Graph construction complete.
+[3] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[2] InitializeGraph::go called
+[0] PageRank::go run 0 called
+[3] PageRank::go run 0 called
+[1] PageRank::go run 0 called
+[2] PageRank::go run 0 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 1 called
+[1] PageRank::go run 1 called
+[3] PageRank::go run 1 called
+[2] PageRank::go run 1 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 2 called
+[1] PageRank::go run 2 called
+[2] PageRank::go run 2 called
+[3] PageRank::go run 2 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 3 called
+[3] PageRank::go run 3 called
+[1] PageRank::go run 3 called
+[2] PageRank::go run 3 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 4 called
+[3] PageRank::go run 4 called
+[1] PageRank::go run 4 called
+[2] PageRank::go run 4 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0

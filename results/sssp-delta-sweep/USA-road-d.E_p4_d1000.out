@@ -1,0 +1,43 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[0] Master distribution time : 0.001163 seconds to read 184 bytes in 21 seeks (0.158212 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.003856 seconds to read 352 bytes in 43 seeks (0.0912863 MBPS)
+[2] Starting graph reading.
+[3] Master distribution time : 0.003992 seconds to read 344 bytes in 42 seeks (0.0861723 MBPS)
+[3] Starting graph reading.
+[1] Master distribution time : 0.004022 seconds to read 360 bytes in 43 seeks (0.0895077 MBPS)
+[1] Starting graph reading.
+[3] Reading graph complete.
+[2] Reading graph complete.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[3] Edge inspection time: 0.033551 seconds to read 23492188 bytes (700.193 MBPS)
+[2] Edge inspection time: 0.040053 seconds to read 22940064 bytes (572.743 MBPS)
+[0] Edge inspection time: 0.041163 seconds to read 23074500 bytes (560.564 MBPS)
+[1] Edge inspection time: 0.04244 seconds to read 23183640 bytes (546.269 MBPS)
+[3] Edge loading time: 0.033948 seconds to read 32270288 bytes (950.58 MBPS)
+[3] Graph construction complete.
+Loading edge-data while creating edges
+[0] Edge loading time: 0.059547 seconds to read 31852624 bytes (534.916 MBPS)
+[0] Graph construction complete.
+[2] Edge loading time: 0.069718 seconds to read 31718184 bytes (454.95 MBPS)
+[2] Graph construction complete.
+[1] Edge loading time: 0.066854 seconds to read 31961752 bytes (478.083 MBPS)
+[1] Graph construction complete.
+[0] InitializeGraph::go called
+[3] InitializeGraph::go called
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[2] SSSP::go run 0 called
+[3] SSSP::go run 0 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06

@@ -1,0 +1,42 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist.
+BFS on Distributed Galois.
+
+[0] Master distribution time : 0.000958 seconds to read 176 bytes in 21 seeks (0.183716 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.004332 seconds to read 344 bytes in 42 seeks (0.079409 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.004679 seconds to read 344 bytes in 42 seeks (0.07352 MBPS)
+[2] Starting graph reading.
+[3] Master distribution time : 0.00468 seconds to read 328 bytes in 40 seeks (0.0700855 MBPS)
+[3] Starting graph reading.
+[2] Reading graph complete.
+[3] Reading graph complete.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[0] Edge inspection time: 0.04403 seconds to read 37361656 bytes (848.55 MBPS)
+[1] Edge inspection time: 0.049542 seconds to read 37369400 bytes (754.297 MBPS)
+[2] Edge inspection time: 0.055589 seconds to read 37380568 bytes (672.445 MBPS)
+[3] Edge inspection time: 0.063721 seconds to read 37346736 bytes (586.098 MBPS)
+Loading edge-data while creating edges
+[1] Edge loading time: 0.051332 seconds to read 37369400 bytes (727.994 MBPS)
+[0] Edge loading time: 0.054518 seconds to read 37361656 bytes (685.309 MBPS)
+[0] Graph construction complete.
+[1] Graph construction complete.
+[2] Edge loading time: 0.051698 seconds to read 37380568 bytes (723.056 MBPS)
+[2] Graph construction complete.
+[3] Edge loading time: 0.05135 seconds to read 37346736 bytes (727.298 MBPS)
+[3] Graph construction complete.
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[3] InitializeGraph::go called
+[0] InitializeGraph::go called
+[1] BFS::go run 0 called
+[0] BFS::go run 0 called
+[3] BFS::go run 0 called
+[2] BFS::go run 0 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756

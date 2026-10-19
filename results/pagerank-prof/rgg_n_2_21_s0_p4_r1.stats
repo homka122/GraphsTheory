@@ -1,0 +1,59 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 50
+STAT, 0, dGraph_Generic, EdgeLoading, HostValues, 50; 50; 50; 49
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, CuSPStateRounds, HostValues, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 53
+STAT, 0, dGraph_Generic, EdgeInspection, HostValues, 38; 43; 49; 53
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 24
+STAT, 0, dGraph_Generic, GraphReading, HostValues, 23; 24; 23; 24
+STAT, 0, DistBench, GraphConstructTime, HMAX, 181
+STAT, 0, DistBench, GraphConstructTime, HostValues, 161; 171; 176; 181
+STAT, 0, ResetGraph_0, Time, HMAX, 2
+STAT, 0, ResetGraph_0, Time, HostValues, 2; 2; 2; 2
+STAT, 0, InitializeGraph_0, Time, HMAX, 4
+STAT, 0, InitializeGraph_0, Time, HostValues, 4; 4; 4; 4
+STAT, 0, PageRank_delta_0, Time, HMAX, 155
+STAT, 0, PageRank_delta_0, Time, HostValues, 142; 144; 155; 143
+STAT, 0, PageRank_0, Time, HMAX, 2418
+STAT, 0, PageRank_0, Time, HostValues, 2395; 2404; 2418; 2407
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HSUM, 3255708
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HostValues, 716504; 1030908; 816560; 691736
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HSUM, 770
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HostValues, 154; 231; 231; 154
+STAT, 0, Gluon, Sync_PageRank_0, HMAX, 2
+STAT, 0, Gluon, Sync_PageRank_0, HostValues, 1; 1; 1; 2
+STAT, 0, PageRank, NumWorkItems_0, HSUM, 152460737
+STAT, 0, PageRank, NumWorkItems_0, HostValues, 38097600; 38137847; 38191211; 38034079
+STAT, 0, PageRank, NumIterations_0, HOST_0, 77
+STAT, 0, PageRank, NumIterations_0, HostValues, 77
+STAT, 0, PageRank, Timer_0, HMAX, 2630
+STAT, 0, PageRank, Timer_0, HostValues, 2630; 2630; 2630; 2630
+STAT, 0, PageRank, TimerTotal, HMAX, 2832
+STAT, 0, PageRank, TimerTotal, HostValues, 2828; 2832; 2832; 2832
+STAT, 0, PageRankSanity, Time, HMAX, 3
+STAT, 0, PageRankSanity, Time, HostValues, 3; 3; 3; 3
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.00529
+STAT, 0, Gluon, ReplicationFactor, HostValues, 1.00529
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-prof-dist /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_21_s0/rgg_n_2_21_s0.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=1 --statFile=rgg_n_2_21_s0_p4_r1.stats --phaseLog=rgg_n_2_21_s0_p4_r1
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-prof-dist /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_21_s0/rgg_n_2_21_s0.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=1 --statFile=rgg_n_2_21_s0_p4_r1.stats --phaseLog=rgg_n_2_21_s0_p4_r1
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 4
+PARAM, 0, DistBench, Hosts, HostValues, 4
+PARAM, 0, DistBench, Runs, HOST_0, 1
+PARAM, 0, DistBench, Runs, HostValues, 1
+PARAM, 0, DistBench, Run_UUID, HOST_0, 3f353b07-51ee-49f1-9735-d62d48918750
+PARAM, 0, DistBench, Run_UUID, HostValues, 3f353b07-51ee-49f1-9735-d62d48918750
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_21_s0/rgg_n_2_21_s0.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_21_s0/rgg_n_2_21_s0.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, PageRank, Max Iterations, HOST_0, 100000000
+PARAM, 0, PageRank, Max Iterations, HostValues, 100000000
+PARAM, 0, PageRank, Tolerance, HOST_0, 1e-06
+PARAM, 0, PageRank, Tolerance, HostValues, 1e-06
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0
+PARAM, 0, dGraph, GenericPartitioner, HostValues, 0; 0; 0; 0

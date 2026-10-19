@@ -1,0 +1,148 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: TC - Distributed Multi-GPU Triangle Counting 
+TC on Distributed GPU (D-IrGL).
+
+[0] Master distribution time : 0.000963 seconds to read 160 bytes in 19 seeks (0.166147 MBPS)
+INFO: Calculating node degrees for partitioner
+[1] Master distribution time : 0.004167 seconds to read 312 bytes in 38 seeks (0.074874 MBPS)
+[2] Master distribution time : 0.004335 seconds to read 312 bytes in 37 seeks (0.0719723 MBPS)
+[3] Master distribution time : 0.004441 seconds to read 296 bytes in 37 seeks (0.0666517 MBPS)
+[0] Starting graph reading.
+[3] Starting graph reading.
+[1] Starting graph reading.
+[2] Starting graph reading.
+[0] Reading graph complete.
+[3] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[0] Inspection sends complete.
+[3] Inspection sends complete.
+[2] Inspection sends complete.
+[1] Inspection sends complete.
+[0] Inspection receives complete.
+[0] Need receive 2992 edges; self is 817718
+[0] Inspection allocation complete.
+[1] Inspection receives complete.
+[1] Need receive 4323 edges; self is 817742
+[1] Inspection allocation complete.
+[3] Inspection receives complete.
+[3] Need receive 2286 edges; self is 817045
+[2] Inspection receives complete.
+[2] Need receive 4216 edges; self is 817261
+[3] Inspection allocation complete.
+[2] Inspection allocation complete.
+[1] Edge loading time: 0.031538 seconds
+[1] Determining thread ranges
+[1] Graph construction complete.
+[0] Edge loading time: 0.031873 seconds
+[0] Determining thread ranges
+[0] Graph construction complete.
+[3] Edge loading time: 0.030783 seconds
+[3] Determining thread ranges
+[3] Graph construction complete.
+[2] Edge loading time: 0.030882 seconds
+[2] Determining thread ranges
+[2] Graph construction complete.
+[3] TC::go run 0 called
+[0] TC::go run 0 called
+[2] TC::go run 0 called
+[1] TC::go run 0 called
+Total number of triangles 7978861
+[0] TC::go run 1 called
+[2] TC::go run 1 called
+[3] TC::go run 1 called
+[1] TC::go run 1 called
+Total number of triangles 7978861
+[0] TC::go run 2 called
+[2] TC::go run 2 called
+[1] TC::go run 2 called
+[3] TC::go run 2 called
+Total number of triangles 7978861
+[0] TC::go run 3 called
+[1] TC::go run 3 called
+[2] TC::go run 3 called
+[3] TC::go run 3 called
+Total number of triangles 7978861
+[0] TC::go run 4 called
+[3] TC::go run 4 called
+[2] TC::go run 4 called
+[1] TC::go run 4 called
+[2] TC::go run 5 called
+[3] TC::go run 5 called
+Total number of triangles 7978861
+[0] TC::go run 5 called
+[1] TC::go run 5 called
+Total number of triangles 7978861
+[0] TC::go run 6 called
+[2] TC::go run 6 called
+[1] TC::go run 6 called
+[3] TC::go run 6 called
+Total number of triangles 7978861
+[0] TC::go run 7 called
+[3] TC::go run 7 called
+[1] TC::go run 7 called
+[2] TC::go run 7 called
+Total number of triangles 7978861
+[0] TC::go run 8 called
+[1] TC::go run 8 called
+[3] TC::go run 8 called
+[2] TC::go run 8 called
+[2] TC::go run 9 called
+Total number of triangles 7978861
+[0] TC::go run 9 called
+[1] TC::go run 9 called
+[3] TC::go run 9 called
+Total number of triangles 7978861
+[0] TC::go run 10 called
+[2] TC::go run 10 called
+[1] TC::go run 10 called
+[3] TC::go run 10 called
+[3] TC::go run 11 called
+[1] TC::go run 11 called
+Total number of triangles 7978861
+[0] TC::go run 11 called
+[2] TC::go run 11 called
+Total number of triangles 7978861
+[0] TC::go run 12 called
+[2] TC::go run 12 called
+[1] TC::go run 12 called
+[3] TC::go run 12 called
+[3] TC::go run 13 called
+[1] TC::go run 13 called
+[2] TC::go run 13 called
+Total number of triangles 7978861
+[0] TC::go run 13 called
+Total number of triangles 7978861
+[0] TC::go run 14 called
+[2] TC::go run 14 called
+[3] TC::go run 14 called
+[1] TC::go run 14 called
+Total number of triangles 7978861
+[0] TC::go run 15 called
+[3] TC::go run 15 called
+[1] TC::go run 15 called
+[2] TC::go run 15 called
+Total number of triangles 7978861
+[0] TC::go run 16 called
+[3] TC::go run 16 called
+[1] TC::go run 16 called
+[2] TC::go run 16 called
+Total number of triangles 7978861
+[0] TC::go run 17 called
+[2] TC::go run 17 called
+[3] TC::go run 17 called
+[1] TC::go run 17 called
+[3] TC::go run 18 called
+Total number of triangles 7978861
+[0] TC::go run 18 called
+[1] TC::go run 18 called
+[2] TC::go run 18 called
+Total number of triangles 7978861
+[0] TC::go run 19 called
+[2] TC::go run 19 called
+[1] TC::go run 19 called
+[3] TC::go run 19 called
+Total number of triangles 7978861

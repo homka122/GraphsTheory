@@ -1,0 +1,89 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: TC - Distributed Multi-GPU Triangle Counting 
+TC on Distributed GPU (D-IrGL).
+
+[4] Master distribution time : 0.005472 seconds to read 320 bytes in 40 seeks (0.0584795 MBPS)
+[5] Master distribution time : 0.005358 seconds to read 312 bytes in 37 seeks (0.0582307 MBPS)
+[0] Master distribution time : 0.001545 seconds to read 168 bytes in 20 seeks (0.108738 MBPS)
+INFO: Calculating node degrees for partitioner
+[1] Master distribution time : 0.005376 seconds to read 336 bytes in 41 seeks (0.0625 MBPS)
+[3] Master distribution time : 0.005446 seconds to read 328 bytes in 40 seeks (0.0602277 MBPS)
+[2] Master distribution time : 0.005658 seconds to read 336 bytes in 42 seeks (0.0593849 MBPS)
+[0] Starting graph reading.
+[5] Starting graph reading.
+[2] Starting graph reading.
+[3] Starting graph reading.
+[1] Starting graph reading.
+[4] Starting graph reading.
+[0] Reading graph complete.
+[5] Reading graph complete.
+[3] Reading graph complete.
+[4] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[0] Inspection sends complete.
+[3] Inspection sends complete.
+[4] Inspection sends complete.
+[2] Inspection sends complete.
+[5] Inspection sends complete.
+[1] Inspection sends complete.
+[0] Inspection receives complete.
+[0] Need receive 410 edges; self is 256862
+[0] Inspection allocation complete.
+[4] Inspection receives complete.
+[4] Need receive 660 edges; self is 256987
+[4] Inspection allocation complete.
+[2] Inspection receives complete.
+[2] Need receive 634 edges; self is 257196
+[2] Inspection allocation complete.
+[3] Inspection receives complete.
+[3] Need receive 535 edges; self is 256986
+[1] Inspection receives complete.
+[1] Need receive 757 edges; self is 256888
+[1] Inspection allocation complete.
+[3] Inspection allocation complete.
+[5] Inspection receives complete.
+[5] Need receive 829 edges; self is 256979
+[5] Inspection allocation complete.
+[5] Edge loading time: 0.021693 seconds
+[5] Determining thread ranges
+[5] Graph construction complete.
+[3] Edge loading time: 0.02221 seconds
+[3] Determining thread ranges
+[3] Graph construction complete.
+[1] Edge loading time: 0.022237 seconds
+[1] Determining thread ranges
+[1] Graph construction complete.
+[2] Edge loading time: 0.022768 seconds
+[2] Determining thread ranges
+[2] Graph construction complete.
+[4] Edge loading time: 0.025018 seconds
+[0] Edge loading time: 0.029092 seconds
+[0] Determining thread ranges
+[0] Graph construction complete.
+[4] Determining thread ranges
+[4] Graph construction complete.
+[4] TC::go run 0 called
+[3] TC::go run 0 called
+[2] TC::go run 0 called
+[5] TC::go run 0 called
+[0] TC::go run 0 called
+[1] TC::go run 0 called
+[4] TC::go run 1 called
+[5] TC::go run 1 called
+[3] TC::go run 1 called
+Total number of triangles 67150
+[0] TC::go run 1 called
+[1] TC::go run 1 called
+[2] TC::go run 1 called
+[5] TC::go run 2 called
+[1] TC::go run 2 called
+[2] TC::go run 2 called
+[4] TC::go run 2 called
+[3] TC::go run 2 called
+Total number of triangles 67150
+[0] TC::go run 2 called
+Total number of triangles 67150

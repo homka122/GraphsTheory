@@ -1,0 +1,47 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: PageRank - Compiler Generated Distributed Heterogeneous, per-round phase profiling
+Residual PageRank on Distributed Galois; writes per-round phase times and useful/empty master counts per host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.000932 seconds to read 192 bytes in 23 seeks (0.206009 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.003464 seconds to read 376 bytes in 46 seeks (0.108545 MBPS)
+[1] Starting graph reading.
+[2] Master distribution time : 0.003288 seconds to read 368 bytes in 45 seeks (0.111922 MBPS)
+[2] Starting graph reading.
+[3] Master distribution time : 0.003611 seconds to read 360 bytes in 43 seeks (0.0996954 MBPS)
+[3] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[3] Reading graph complete.
+[0] Edge inspection time: 0.114006 seconds to read 74202452 bytes (650.864 MBPS)
+[1] Edge inspection time: 0.127712 seconds to read 77162480 bytes (604.191 MBPS)
+[2] Edge inspection time: 0.148943 seconds to read 83458432 bytes (560.338 MBPS)
+[3] Edge inspection time: 0.199859 seconds to read 118712832 bytes (593.983 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.642607 seconds to read 74202452 bytes (115.471 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.645424 seconds to read 77162480 bytes (119.553 MBPS)
+[1] Graph construction complete.
+[3] Edge loading time: 0.563951 seconds to read 118712832 bytes (210.502 MBPS)
+[3] Graph construction complete.
+[2] Edge loading time: 0.754596 seconds to read 83458432 bytes (110.6 MBPS)
+[2] Graph construction complete.
+[3] InitializeGraph::go called
+[0] InitializeGraph::go called
+[1] InitializeGraph::go called
+[2] InitializeGraph::go called
+[0] PageRank::go run 0 called
+[3] PageRank::go run 0 called
+[2] PageRank::go run 0 called
+[1] PageRank::go run 0 called
+Max rank is 667.727
+Min rank is 0.15
+Rank sum is 3.91495e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0

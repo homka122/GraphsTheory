@@ -1,0 +1,103 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: PageRank - Compiler Generated Distributed Heterogeneous
+Residual PageRank on Distributed Galois.
+
+[0] Master distribution time : 0.001117 seconds to read 176 bytes in 21 seeks (0.157565 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.00361 seconds to read 352 bytes in 43 seeks (0.0975069 MBPS)
+[2] Starting graph reading.
+[3] Master distribution time : 0.003622 seconds to read 344 bytes in 41 seeks (0.0949752 MBPS)
+[3] Starting graph reading.
+[4] Master distribution time : 0.004083 seconds to read 328 bytes in 40 seeks (0.0803331 MBPS)
+[4] Starting graph reading.
+[1] Master distribution time : 0.003782 seconds to read 352 bytes in 44 seeks (0.0930725 MBPS)
+[1] Starting graph reading.
+[2] Reading graph complete.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[4] Reading graph complete.
+[3] Reading graph complete.
+[0] Edge inspection time: 0.031403 seconds to read 29902704 bytes (952.224 MBPS)
+[1] Edge inspection time: 0.035383 seconds to read 29878600 bytes (844.434 MBPS)
+[2] Edge inspection time: 0.040057 seconds to read 29908572 bytes (746.65 MBPS)
+[3] Edge inspection time: 0.045379 seconds to read 29890268 bytes (658.681 MBPS)
+[4] Edge inspection time: 0.05125 seconds to read 29878208 bytes (582.989 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.04131 seconds to read 29902704 bytes (723.861 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.041013 seconds to read 29878600 bytes (728.515 MBPS)
+[1] Graph construction complete.
+[2] Edge loading time: 0.041384 seconds to read 29908572 bytes (722.709 MBPS)
+[2] Graph construction complete.
+[3] Edge loading time: 0.041019 seconds to read 29890268 bytes (728.693 MBPS)
+[3] Graph construction complete.
+[4] Edge loading time: 0.040497 seconds to read 29878208 bytes (737.788 MBPS)
+[4] Graph construction complete.
+[3] InitializeGraph::go called
+[1] InitializeGraph::go called
+[2] InitializeGraph::go called
+[4] InitializeGraph::go called
+[0] InitializeGraph::go called
+[3] PageRank::go run 0 called
+[4] PageRank::go run 0 called
+[0] PageRank::go run 0 called
+[2] PageRank::go run 0 called
+[1] PageRank::go run 0 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09713e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 1 called
+[2] PageRank::go run 1 called
+[3] PageRank::go run 1 called
+[1] PageRank::go run 1 called
+[4] PageRank::go run 1 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09713e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 2 called
+[2] PageRank::go run 2 called
+[3] PageRank::go run 2 called
+[1] PageRank::go run 2 called
+[4] PageRank::go run 2 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09713e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 3 called
+[2] PageRank::go run 3 called
+[1] PageRank::go run 3 called
+[3] PageRank::go run 3 called
+[4] PageRank::go run 3 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09713e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0
+[0] PageRank::go run 4 called
+[2] PageRank::go run 4 called
+[1] PageRank::go run 4 called
+[3] PageRank::go run 4 called
+[4] PageRank::go run 4 called
+Max rank is 1.70477
+Min rank is 0.15
+Rank sum is 2.09713e+06
+Residual sum is 0
+# nodes with residual over 1e-06 (tolerance) is 0
+Max residual is 1.17549e-38
+Min residual is 0

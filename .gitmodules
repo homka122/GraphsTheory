@@ -1,0 +1,4 @@
+[submodule "deps/Galois"]
+	path = deps/Galois
+	url = https://github.com/IntelligentSoftwareSystems/Galois
+	ignore = dirty

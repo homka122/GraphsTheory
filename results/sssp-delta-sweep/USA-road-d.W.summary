@@ -1,0 +1,13 @@
+USA-road-d.W P=1 delta=4000 rc=0 time_med=59737 rounds=8339 work=71474807 maxdist=33343228 
+USA-road-d.W P=1 delta=6000 rc=0 time_med=41606 rounds=5560 work=215222260 maxdist=33343228 
+USA-road-d.W P=1 delta=8000 rc=0 time_med=37636 rounds=4171 work=856441724 maxdist=33343228 
+USA-road-d.W P=1 delta=10000 rc=0 time_med=42261 rounds=3354 work=2029513959 maxdist=33343228 
+USA-road-d.W P=1 delta=12000 rc=0 time_med=59362 rounds=3169 work=4155717105 maxdist=33343228 
+USA-road-d.W P=1 delta=16000 rc=0 time_med=93647 rounds=3169 work=8023530344 maxdist=33343228 
+USA-road-d.W P=1 delta=0 rc=0 time_med=135750 rounds=3169 work=11062290195 maxdist=33343228 
+USA-road-d.W P=2 delta=4000 rc=0 time_med=55940 rounds=8339 work=105955274 maxdist=33343228 
+USA-road-d.W P=2 delta=6000 rc=0 time_med=40186 rounds=5560 work=394598205 maxdist=33343228 
+USA-road-d.W P=2 delta=8000 rc=0 time_med=46049 rounds=4171 work=2040206562 maxdist=33343228 
+USA-road-d.W P=2 delta=10000 rc=0 time_med=71308 rounds=3889 work=4935421741 maxdist=33343228 
+USA-road-d.W P=2 delta=12000 rc=0 time_med=99488 rounds=3889 work=8186563550 maxdist=33343228 
+USA-road-d.W P=2 delta=16000 rc=0 time_med=127532 rounds=3889 work=11731023241 maxdist=33343228 

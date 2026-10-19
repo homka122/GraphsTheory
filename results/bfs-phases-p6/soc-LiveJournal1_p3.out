@@ -1,0 +1,54 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist, per-round phase profiling.
+BFS on Distributed Galois; writes compute/barrier/sync/term time per round and host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.000935 seconds to read 184 bytes in 21 seeks (0.196791 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.002667 seconds to read 360 bytes in 44 seeks (0.134983 MBPS)
+[2] Starting graph reading.
+[1] Master distribution time : 0.002582 seconds to read 376 bytes in 46 seeks (0.145624 MBPS)
+[1] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[2] Reading graph complete.
+[0] Edge inspection time: 0.147269 seconds to read 99958840 bytes (678.75 MBPS)
+[1] Edge inspection time: 0.169128 seconds to read 106329644 bytes (628.693 MBPS)
+[2] Edge inspection time: 0.231619 seconds to read 147247720 bytes (635.732 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.564428 seconds to read 99958840 bytes (177.098 MBPS)
+[0] Graph construction complete.
+[2] Edge loading time: 0.572019 seconds to read 147247720 bytes (257.418 MBPS)
+[2] Graph construction complete.
+[1] Edge loading time: 0.774502 seconds to read 106329644 bytes (137.288 MBPS)
+[1] Graph construction complete.
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[0] BFS::go run 0 called
+[1] BFS::go run 0 called
+[2] BFS::go run 0 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 1 called
+[1] BFS::go run 1 called
+[2] BFS::go run 1 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 2 called
+[1] BFS::go run 2 called
+[2] BFS::go run 2 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 3 called
+[1] BFS::go run 3 called
+[2] BFS::go run 3 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13
+[0] BFS::go run 4 called
+[2] BFS::go run 4 called
+[1] BFS::go run 4 called
+Number of nodes visited from source 10009 is 4400347
+Max distance from source 10009 is 13

@@ -1,0 +1,27 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 28
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 30
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 11
+STAT, 0, DistBench, GraphConstructTime, HMAX, 139
+STAT, 0, InitializeGraph_0, Time, HMAX, 3
+STAT, 0, BFS_scan_calibration, Time, HMAX, 5
+STAT, 0, Gluon, ReduceNumMessages_BFS_0, HSUM, 0
+STAT, 0, BFS, NumWorkItems_0, HSUM, 3083020
+STAT, 0, BFS, NumIterations_0, HMAX, 595
+STAT, 0, BFS, Timer_0, HMAX, 774
+STAT, 0, BFS, TimerTotal, HMAX, 927
+STAT, 0, BFS_0, Time, HMAX, 594
+STAT, 0, BFSSanityCheck, Time, HMAX, 3
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/lonestar/analytics/distributed/bfs/bfs-push-prof-dist /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr --exec=Sync --delta=1 --startNode=674502 -t=1 --runs=1 --phaseLog=road_p1_t1 --statFile=road_p1_t1.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 1
+PARAM, 0, DistBench, Runs, HOST_0, 1
+PARAM, 0, DistBench, Run_UUID, HOST_0, e908e1f0-c33b-4aa5-9d35-b7508ab45b81
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, BFS, Max Iterations, HOST_0, 1000
+PARAM, 0, BFS, Source Node ID, HOST_0, 674502
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0

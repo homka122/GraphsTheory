@@ -1,0 +1,26 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist.
+BFS on Distributed Galois.
+
+[0] Master distribution time : 0.000529 seconds to read 168 bytes in 21 seeks (0.31758 MBPS)
+[0] Starting graph reading.
+[1] Master distribution time : 0.002864 seconds to read 320 bytes in 40 seeks (0.111732 MBPS)
+[1] Starting graph reading.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[0] Edge inspection time: 0.038916 seconds to read 35968744 bytes (924.266 MBPS)
+[1] Edge inspection time: 0.045267 seconds to read 35941416 bytes (793.987 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.047625 seconds to read 35968744 bytes (755.249 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.047495 seconds to read 35941416 bytes (756.741 MBPS)
+[1] Graph construction complete.
+[0] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] BFS::go run 0 called
+[1] BFS::go run 0 called
+Number of nodes visited from source 764285 is 1048572
+Max distance from source 764285 is 454

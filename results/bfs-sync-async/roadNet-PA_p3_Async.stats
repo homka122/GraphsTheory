@@ -1,0 +1,77 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 10
+STAT, 0, dGraph_Generic, EdgeLoading, HostValues, 10; 10; 10
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, CuSPStateRounds, HostValues, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 13
+STAT, 0, dGraph_Generic, EdgeInspection, HostValues, 12; 11; 13
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 4
+STAT, 0, dGraph_Generic, GraphReading, HostValues, 4; 4; 4
+STAT, 0, DistBench, GraphConstructTime, HMAX, 66
+STAT, 0, DistBench, GraphConstructTime, HostValues, 66; 62; 64
+STAT, 0, InitializeGraph_0, Time, HMAX, 1
+STAT, 0, InitializeGraph_0, Time, HostValues, 1; 1; 1
+STAT, 0, Gluon, ReduceSendBytes_BFS_0, HSUM, 200288
+STAT, 0, Gluon, ReduceSendBytes_BFS_0, HostValues, 60168; 80980; 59140
+STAT, 0, Gluon, ReduceNumMessages_BFS_0, HSUM, 2760
+STAT, 0, Gluon, ReduceNumMessages_BFS_0, HostValues, 876; 955; 929
+STAT, 0, Gluon, ReduceSendBytes_BFS_1, HSUM, 203436
+STAT, 0, Gluon, ReduceSendBytes_BFS_1, HostValues, 61636; 83516; 58284
+STAT, 0, Gluon, ReduceNumMessages_BFS_1, HSUM, 2761
+STAT, 0, Gluon, ReduceNumMessages_BFS_1, HostValues, 879; 953; 929
+STAT, 0, Gluon, ReduceSendBytes_BFS_2, HSUM, 201728
+STAT, 0, Gluon, ReduceSendBytes_BFS_2, HostValues, 60420; 82164; 59144
+STAT, 0, Gluon, ReduceNumMessages_BFS_2, HSUM, 2766
+STAT, 0, Gluon, ReduceNumMessages_BFS_2, HostValues, 879; 955; 932
+STAT, 0, BFS, NumWorkItems_0, HSUM, 3227048
+STAT, 0, BFS, NumWorkItems_0, HostValues, 1037911; 1156092; 1033045
+STAT, 0, BFS, NumIterations_0, HMAX, 627
+STAT, 0, BFS, NumIterations_0, HostValues, 593; 627; 608
+STAT, 0, BFS, Timer_0, HMAX, 272
+STAT, 0, BFS, Timer_0, HostValues, 271; 272; 272
+STAT, 0, BFS, NumWorkItems_1, HSUM, 3286304
+STAT, 0, BFS, NumWorkItems_1, HostValues, 1051617; 1206699; 1027988
+STAT, 0, BFS, NumIterations_1, HMAX, 630
+STAT, 0, BFS, NumIterations_1, HostValues, 606; 630; 608
+STAT, 0, BFS, Timer_1, HMAX, 274
+STAT, 0, BFS, Timer_1, HostValues, 272; 274; 273
+STAT, 0, BFS, NumWorkItems_2, HSUM, 3249232
+STAT, 0, BFS, NumWorkItems_2, HostValues, 1039950; 1178505; 1030777
+STAT, 0, BFS, NumIterations_2, HMAX, 623
+STAT, 0, BFS, NumIterations_2, HostValues, 599; 623; 607
+STAT, 0, BFS, Timer_2, HMAX, 272
+STAT, 0, BFS, Timer_2, HostValues, 272; 272; 272
+STAT, 0, BFS, TimerTotal, HMAX, 898
+STAT, 0, BFS, TimerTotal, HostValues, 894; 898; 898
+STAT, 0, BFS_0, Time, HMAX, 3
+STAT, 0, BFS_0, Time, HostValues, 3
+STAT, 0, BFSSanityCheck, Time, HMAX, 3
+STAT, 0, BFSSanityCheck, Time, HostValues, 3; 3; 3
+STAT, 0, InitializeGraph_1, Time, HMAX, 1
+STAT, 0, InitializeGraph_1, Time, HostValues, 1; 1; 1
+STAT, 0, InitializeGraph_2, Time, HMAX, 1
+STAT, 0, InitializeGraph_2, Time, HostValues, 1; 1; 1
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.01217
+STAT, 0, Gluon, ReplicationFactor, HostValues, 1.01217
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/lonestar/analytics/distributed/bfs/bfs-push-dist /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr --exec=Async --delta=1 --startNode=674502 -t=1 --runs=3 --statFile=road_p3_Async.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/lonestar/analytics/distributed/bfs/bfs-push-dist /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr --exec=Async --delta=1 --startNode=674502 -t=1 --runs=3 --statFile=road_p3_Async.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 3
+PARAM, 0, DistBench, Hosts, HostValues, 3
+PARAM, 0, DistBench, Runs, HOST_0, 3
+PARAM, 0, DistBench, Runs, HostValues, 3
+PARAM, 0, DistBench, Run_UUID, HOST_0, a9df52b4-12bc-4f45-9612-481626dc17d3
+PARAM, 0, DistBench, Run_UUID, HostValues, a9df52b4-12bc-4f45-9612-481626dc17d3
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC
+PARAM, 0, BFS, Max Iterations, HOST_0, 1000
+PARAM, 0, BFS, Max Iterations, HostValues, 1000
+PARAM, 0, BFS, Source Node ID, HOST_0, 674502
+PARAM, 0, BFS, Source Node ID, HostValues, 674502
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0
+PARAM, 0, dGraph, GenericPartitioner, HostValues, 0; 0; 0

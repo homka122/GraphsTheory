@@ -1,0 +1,37 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: TC - Distributed Multi-GPU Triangle Counting 
+TC on Distributed GPU (D-IrGL).
+
+[0] Master distribution time : 0.000408 seconds to read 176 bytes in 21 seeks (0.431373 MBPS)
+INFO: Calculating node degrees for partitioner
+[1] Master distribution time : 0.003281 seconds to read 336 bytes in 41 seeks (0.102408 MBPS)
+[0] Starting graph reading.
+[1] Starting graph reading.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[1] Inspection sends complete.
+[0] Inspection sends complete.
+[0] Inspection receives complete.
+[1] Inspection receives complete.
+[0] Need receive 517 edges; self is 770945
+[1] Need receive 918 edges; self is 770953
+[0] Inspection allocation complete.
+[1] Inspection allocation complete.
+[0] Edge loading time: 0.045241 seconds
+[0] Determining thread ranges
+[0] Graph construction complete.
+[1] Edge loading time: 0.045179 seconds
+[1] Determining thread ranges
+[1] Graph construction complete.
+[1] TC::go run 0 called
+[0] TC::go run 0 called
+[1] TC::go run 1 called
+Total number of triangles 67150
+[0] TC::go run 1 called
+Total number of triangles 67150
+[0] TC::go run 2 called
+[1] TC::go run 2 called
+Total number of triangles 67150

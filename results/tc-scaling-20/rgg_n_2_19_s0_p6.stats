@@ -1,0 +1,179 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, GetNodeDegrees, Time, HMAX, 3
+STAT, 0, GetNodeDegrees, Time, HostValues, 3; 3; 3; 3; 3; 3
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HSUM, 14679488
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HostValues, 2121236; 3490620; 2800308; 2098292; 2082452; 2086580
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HSUM, 21
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HostValues, 3; 5; 4; 3; 3; 3
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HSUM, 242128
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HostValues, 31696; 45464; 41064; 45320; 47088; 31496
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HMAX, 20344
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HostValues, 18920; 18912; 20264; 20080; 18616; 20344
+STAT, 0, dGraph_Mining, EdgeLoading, HMAX, 25
+STAT, 0, dGraph_Mining, EdgeLoading, HostValues, 23; 24; 24; 25; 24; 24
+STAT, 0, dGraph_Mining, TotalNodeProxies, HOST_0, 529597
+STAT, 0, dGraph_Mining, TotalNodeProxies, HostValues, 529597
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HOST_0, 3290480
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HostValues, 3290480
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HOST_0, 6539532
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HostValues, 6539532
+STAT, 0, dGraph_Mining, TotalKeptEdges, HOST_0, 3269766
+STAT, 0, dGraph_Mining, TotalKeptEdges, HostValues, 3269766
+STAT, 0, dGraph_Mining, EdgeInspection, HMAX, 48
+STAT, 0, dGraph_Mining, EdgeInspection, HostValues, 48; 46; 45; 45; 47; 46
+STAT, 0, dGraph_Mining, GraphReading, HMAX, 5
+STAT, 0, dGraph_Mining, GraphReading, HostValues, 4; 5; 4; 5; 4; 5
+STAT, 0, DistBench, GraphConstructTime, HMAX, 96
+STAT, 0, DistBench, GraphConstructTime, HostValues, 92; 96; 96; 96; 96; 96
+STAT, 0, DistMiningBench, DistGraphInitialization, HMAX, 96
+STAT, 0, DistMiningBench, DistGraphInitialization, HostValues, 92; 96; 96; 96; 96; 96
+STAT, 0, CSREdgeSort, Time, HMAX, 2
+STAT, 0, CSREdgeSort, Time, HostValues, 2; 2; 2; 2; 2; 2
+STAT, 0, TC, SortEdgesCPU, HMAX, 2
+STAT, 0, TC, SortEdgesCPU, HostValues, 2; 2; 2; 2; 2; 2
+STAT, 0, TC, Timer_0, HMAX, 29
+STAT, 0, TC, Timer_0, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_1, HMAX, 29
+STAT, 0, TC, Timer_1, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_2, HMAX, 29
+STAT, 0, TC, Timer_2, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_3, HMAX, 29
+STAT, 0, TC, Timer_3, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_4, HMAX, 29
+STAT, 0, TC, Timer_4, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_5, HMAX, 29
+STAT, 0, TC, Timer_5, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_6, HMAX, 29
+STAT, 0, TC, Timer_6, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_7, HMAX, 29
+STAT, 0, TC, Timer_7, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_8, HMAX, 29
+STAT, 0, TC, Timer_8, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_9, HMAX, 29
+STAT, 0, TC, Timer_9, HostValues, 29; 29; 29; 28; 29; 29
+STAT, 0, TC, Timer_10, HMAX, 29
+STAT, 0, TC, Timer_10, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_11, HMAX, 29
+STAT, 0, TC, Timer_11, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_12, HMAX, 29
+STAT, 0, TC, Timer_12, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_13, HMAX, 29
+STAT, 0, TC, Timer_13, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_14, HMAX, 29
+STAT, 0, TC, Timer_14, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_15, HMAX, 29
+STAT, 0, TC, Timer_15, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_16, HMAX, 29
+STAT, 0, TC, Timer_16, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_17, HMAX, 29
+STAT, 0, TC, Timer_17, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_18, HMAX, 29
+STAT, 0, TC, Timer_18, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, Timer_19, HMAX, 29
+STAT, 0, TC, Timer_19, HostValues, 29; 29; 29; 29; 29; 29
+STAT, 0, TC, TimerTotal, HMAX, 684
+STAT, 0, TC, TimerTotal, HostValues, 679; 684; 684; 684; 684; 684
+STAT, 0, TC_0, Time, HMAX, 29
+STAT, 0, TC_0, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_0, Iterations, HSUM, 524288
+STAT, 0, TC_0, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_1, Time, HMAX, 29
+STAT, 0, TC_1, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_1, Iterations, HSUM, 524288
+STAT, 0, TC_1, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_2, Time, HMAX, 29
+STAT, 0, TC_2, Time, HostValues, 28; 29; 28; 28; 29; 28
+STAT, 0, TC_2, Iterations, HSUM, 524288
+STAT, 0, TC_2, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_3, Time, HMAX, 29
+STAT, 0, TC_3, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_3, Iterations, HSUM, 524288
+STAT, 0, TC_3, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_4, Time, HMAX, 29
+STAT, 0, TC_4, Time, HostValues, 28; 29; 28; 28; 29; 28
+STAT, 0, TC_4, Iterations, HSUM, 524288
+STAT, 0, TC_4, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_5, Time, HMAX, 29
+STAT, 0, TC_5, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_5, Iterations, HSUM, 524288
+STAT, 0, TC_5, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_6, Time, HMAX, 29
+STAT, 0, TC_6, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_6, Iterations, HSUM, 524288
+STAT, 0, TC_6, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_7, Time, HMAX, 29
+STAT, 0, TC_7, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_7, Iterations, HSUM, 524288
+STAT, 0, TC_7, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_8, Time, HMAX, 29
+STAT, 0, TC_8, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_8, Iterations, HSUM, 524288
+STAT, 0, TC_8, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_9, Time, HMAX, 28
+STAT, 0, TC_9, Time, HostValues, 28; 28; 28; 28; 28; 28
+STAT, 0, TC_9, Iterations, HSUM, 524288
+STAT, 0, TC_9, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_10, Time, HMAX, 29
+STAT, 0, TC_10, Time, HostValues, 28; 29; 28; 28; 29; 28
+STAT, 0, TC_10, Iterations, HSUM, 524288
+STAT, 0, TC_10, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_11, Time, HMAX, 29
+STAT, 0, TC_11, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_11, Iterations, HSUM, 524288
+STAT, 0, TC_11, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_12, Time, HMAX, 29
+STAT, 0, TC_12, Time, HostValues, 28; 29; 28; 28; 29; 28
+STAT, 0, TC_12, Iterations, HSUM, 524288
+STAT, 0, TC_12, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_13, Time, HMAX, 29
+STAT, 0, TC_13, Time, HostValues, 28; 29; 28; 29; 29; 29
+STAT, 0, TC_13, Iterations, HSUM, 524288
+STAT, 0, TC_13, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_14, Time, HMAX, 29
+STAT, 0, TC_14, Time, HostValues, 28; 28; 28; 28; 29; 29
+STAT, 0, TC_14, Iterations, HSUM, 524288
+STAT, 0, TC_14, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_15, Time, HMAX, 29
+STAT, 0, TC_15, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_15, Iterations, HSUM, 524288
+STAT, 0, TC_15, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_16, Time, HMAX, 29
+STAT, 0, TC_16, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_16, Iterations, HSUM, 524288
+STAT, 0, TC_16, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_17, Time, HMAX, 29
+STAT, 0, TC_17, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_17, Iterations, HSUM, 524288
+STAT, 0, TC_17, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_18, Time, HMAX, 29
+STAT, 0, TC_18, Time, HostValues, 28; 29; 28; 28; 29; 29
+STAT, 0, TC_18, Iterations, HSUM, 524288
+STAT, 0, TC_18, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, TC_19, Time, HMAX, 29
+STAT, 0, TC_19, Time, HostValues, 28; 28; 28; 28; 29; 28
+STAT, 0, TC_19, Iterations, HSUM, 524288
+STAT, 0, TC_19, Iterations, HostValues, 88383; 87264; 87508; 87427; 86767; 86939
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HOST_0, 1.01013
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HostValues, 1.01013
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HOST_0, 1.00634
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HostValues, 1.00634
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_19_s0/rgg_n_2_19_s0.sym.gr -symmetricGraph -t=1 --runs=20 --statFile=rgg_n_2_19_s0_p6.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_19_s0/rgg_n_2_19_s0.sym.gr -symmetricGraph -t=1 --runs=20 --statFile=rgg_n_2_19_s0_p6.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 6
+PARAM, 0, DistBench, Hosts, HostValues, 6
+PARAM, 0, DistBench, Runs, HOST_0, 20
+PARAM, 0, DistBench, Runs, HostValues, 20
+PARAM, 0, DistBench, Run_UUID, HOST_0, c2b51a9f-5c35-4fb1-bfd1-6328c4ef32eb
+PARAM, 0, DistBench, Run_UUID, HostValues, c2b51a9f-5c35-4fb1-bfd1-6328c4ef32eb
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_19_s0/rgg_n_2_19_s0.sym.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/rgg_n_2_19_s0/rgg_n_2_19_s0.sym.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, dGraph_Mining, MiningGraph, HOST_0, 0
+PARAM, 0, dGraph_Mining, MiningGraph, HostValues, 0; 0; 0; 0; 0; 0
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HOST_0, 1
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HostValues, 1; 1; 1; 1; 1; 1

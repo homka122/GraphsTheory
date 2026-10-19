@@ -1,0 +1,54 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist.
+BFS on Distributed Galois.
+
+[0] Master distribution time : 0.000952 seconds to read 176 bytes in 21 seeks (0.184874 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.003335 seconds to read 336 bytes in 41 seeks (0.10075 MBPS)
+[2] Starting graph reading.
+[1] Master distribution time : 0.003129 seconds to read 344 bytes in 43 seeks (0.109939 MBPS)
+[1] Starting graph reading.
+[2] Reading graph complete.
+[0] Reading graph complete.
+[1] Reading graph complete.
+[0] Edge inspection time: 0.054566 seconds to read 49820728 bytes (913.036 MBPS)
+[1] Edge inspection time: 0.063448 seconds to read 49832476 bytes (785.407 MBPS)
+[2] Edge inspection time: 0.072037 seconds to read 49805164 bytes (691.383 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.065769 seconds to read 49820728 bytes (757.511 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.065557 seconds to read 49832476 bytes (760.14 MBPS)
+[1] Graph construction complete.
+[2] Edge loading time: 0.065467 seconds to read 49805164 bytes (760.767 MBPS)
+[2] Graph construction complete.
+[0] InitializeGraph::go called
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[2] BFS::go run 0 called
+[1] BFS::go run 0 called
+[0] BFS::go run 0 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 1 called
+[1] BFS::go run 1 called
+[2] BFS::go run 1 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 2 called
+[1] BFS::go run 2 called
+[2] BFS::go run 2 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 3 called
+[1] BFS::go run 3 called
+[2] BFS::go run 3 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756
+[0] BFS::go run 4 called
+[1] BFS::go run 4 called
+[2] BFS::go run 4 called
+Number of nodes visited from source 1767915 is 2097142
+Max distance from source 1767915 is 756

@@ -1,0 +1,57 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[0] Master distribution time : 0.000799 seconds to read 184 bytes in 21 seeks (0.230288 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.00374 seconds to read 352 bytes in 43 seeks (0.0941176 MBPS)
+[2] Starting graph reading.
+[1] Master distribution time : 0.003693 seconds to read 360 bytes in 43 seeks (0.0974817 MBPS)
+[1] Starting graph reading.
+[3] Master distribution time : 0.003643 seconds to read 344 bytes in 42 seeks (0.0944277 MBPS)
+[3] Starting graph reading.
+[1] Reading graph complete.
+[0] Reading graph complete.
+[3] Reading graph complete.
+[2] Reading graph complete.
+[3] Edge inspection time: 0.034448 seconds to read 23492188 bytes (681.961 MBPS)
+[2] Edge inspection time: 0.040769 seconds to read 22940064 bytes (562.684 MBPS)
+[0] Edge inspection time: 0.042087 seconds to read 23074500 bytes (548.257 MBPS)
+[1] Edge inspection time: 0.043221 seconds to read 23183640 bytes (536.398 MBPS)
+[3] Edge loading time: 0.033929 seconds to read 32270288 bytes (951.112 MBPS)
+[3] Graph construction complete.
+Loading edge-data while creating edges
+[0] Edge loading time: 0.060065 seconds to read 31852624 bytes (530.303 MBPS)
+[0] Graph construction complete.
+[2] Edge loading time: 0.071281 seconds to read 31718184 bytes (444.974 MBPS)
+[2] Graph construction complete.
+[1] Edge loading time: 0.068568 seconds to read 31961752 bytes (466.132 MBPS)
+[1] Graph construction complete.
+[0] InitializeGraph::go called
+[3] InitializeGraph::go called
+[2] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] SSSP::go run 0 called
+[2] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[3] SSSP::go run 0 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06
+[0] SSSP::go run 1 called
+[2] SSSP::go run 1 called
+[1] SSSP::go run 1 called
+[3] SSSP::go run 1 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06
+[0] SSSP::go run 2 called
+[2] SSSP::go run 2 called
+[1] SSSP::go run 2 called
+[3] SSSP::go run 2 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06

@@ -1,0 +1,66 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: BFS - Distributed Heterogeneous with worklist, per-round phase profiling.
+BFS on Distributed Galois; writes compute/barrier/sync/term time per round and host to <phaseLog>.host<ID>.csv.
+
+[0] Master distribution time : 0.001261 seconds to read 176 bytes in 22 seeks (0.139572 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.002712 seconds to read 328 bytes in 41 seeks (0.120944 MBPS)
+[2] Starting graph reading.
+[3] Master distribution time : 0.003022 seconds to read 320 bytes in 39 seeks (0.10589 MBPS)
+[3] Starting graph reading.
+[1] Master distribution time : 0.002867 seconds to read 344 bytes in 43 seeks (0.119986 MBPS)
+[1] Starting graph reading.
+[0] Reading graph complete.
+[2] Reading graph complete.
+[3] Reading graph complete.
+[1] Reading graph complete.
+[0] Edge inspection time: 0.008169 seconds to read 7427796 bytes (909.266 MBPS)
+[1] Edge inspection time: 0.008798 seconds to read 7465624 bytes (848.559 MBPS)
+[2] Edge inspection time: 0.009771 seconds to read 7386276 bytes (755.939 MBPS)
+[3] Edge inspection time: 0.010647 seconds to read 7510176 bytes (705.38 MBPS)
+Loading edge-data while creating edges
+[0] Edge loading time: 0.007811 seconds to read 7427796 bytes (950.94 MBPS)
+[0] Graph construction complete.
+[1] Edge loading time: 0.007794 seconds to read 7465624 bytes (957.868 MBPS)
+[2] Edge loading time: 0.007756 seconds to read 7386276 bytes (952.331 MBPS)
+[1] Graph construction complete.
+[3] Edge loading time: 0.00771 seconds to read 7510176 bytes (974.083 MBPS)
+[2] Graph construction complete.
+[3] Graph construction complete.
+[2] InitializeGraph::go called
+[3] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] InitializeGraph::go called
+[0] BFS::go run 0 called
+[2] BFS::go run 0 called
+[3] BFS::go run 0 called
+[1] BFS::go run 0 called
+Number of nodes visited from source 674502 is 1087562
+Max distance from source 674502 is 592
+[0] BFS::go run 1 called
+[1] BFS::go run 1 called
+[2] BFS::go run 1 called
+[3] BFS::go run 1 called
+Number of nodes visited from source 674502 is 1087562
+Max distance from source 674502 is 592
+[0] BFS::go run 2 called
+[1] BFS::go run 2 called
+[3] BFS::go run 2 called
+[2] BFS::go run 2 called
+Number of nodes visited from source 674502 is 1087562
+Max distance from source 674502 is 592
+[0] BFS::go run 3 called
+[2] BFS::go run 3 called
+[1] BFS::go run 3 called
+[3] BFS::go run 3 called
+Number of nodes visited from source 674502 is 1087562
+Max distance from source 674502 is 592
+[0] BFS::go run 4 called
+[2] BFS::go run 4 called
+[1] BFS::go run 4 called
+[3] BFS::go run 4 called
+Number of nodes visited from source 674502 is 1087562
+Max distance from source 674502 is 592

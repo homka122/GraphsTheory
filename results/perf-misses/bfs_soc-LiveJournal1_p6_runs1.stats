@@ -1,0 +1,28 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 636
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 182
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 61
+STAT, 0, DistBench, GraphConstructTime, HMAX, 1064
+STAT, 0, InitializeGraph_0, Time, HMAX, 21
+STAT, 0, BFS_0, Time, HMAX, 306
+STAT, 0, Gluon, ReduceSendBytes_BFS_0, HSUM, 45109276
+STAT, 0, Gluon, ReduceNumMessages_BFS_0, HSUM, 480
+STAT, 0, Gluon, Sync_BFS_0, HMAX, 311
+STAT, 0, BFS, NumWorkItems_0, HSUM, 68155484
+STAT, 0, BFS, NumIterations_0, HMAX, 16
+STAT, 0, BFS, Timer_0, HMAX, 562
+STAT, 0, BFS, TimerTotal, HMAX, 1823
+STAT, 0, BFSSanityCheck, Time, HMAX, 9
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 3.05022
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/bfs-push-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr --delta=1 --startNode=10009 --exec=Sync -t=1 --runs=1 --statFile=bfs_soc-LiveJournal1_p6_runs1.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 6
+PARAM, 0, DistBench, Runs, HOST_0, 1
+PARAM, 0, DistBench, Run_UUID, HOST_0, 9a1970a9-173d-4b9b-8201-e1354f33610d
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, BFS, Max Iterations, HOST_0, 1000
+PARAM, 0, BFS, Source Node ID, HOST_0, 10009
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0

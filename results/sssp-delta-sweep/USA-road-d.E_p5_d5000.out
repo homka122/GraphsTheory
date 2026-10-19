@@ -1,0 +1,67 @@
+D-Galois Benchmark Suite v6.0.0 (unknown)
+Copyright (C) 2018 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: SSSP - Distributed Heterogeneous with worklist.
+Variant of Chaotic relaxation SSSP on Distributed Galois.
+
+[0] Master distribution time : 0.001176 seconds to read 184 bytes in 23 seeks (0.156463 MBPS)
+[0] Starting graph reading.
+[2] Master distribution time : 0.003988 seconds to read 360 bytes in 44 seeks (0.0902708 MBPS)
+[2] Starting graph reading.
+[1] Master distribution time : 0.00385 seconds to read 360 bytes in 44 seeks (0.0935065 MBPS)
+[1] Starting graph reading.
+[3] Master distribution time : 0.004048 seconds to read 352 bytes in 44 seeks (0.0869565 MBPS)
+[3] Starting graph reading.
+[4] Master distribution time : 0.00422 seconds to read 344 bytes in 42 seeks (0.0815166 MBPS)
+[4] Starting graph reading.
+[3] Reading graph complete.
+[1] Reading graph complete.
+[4] Reading graph complete.
+[2] Reading graph complete.
+[0] Reading graph complete.
+[4] Edge inspection time: 0.031888 seconds to read 18948192 bytes (594.211 MBPS)
+[3] Edge inspection time: 0.03513 seconds to read 18355460 bytes (522.501 MBPS)
+[1] Edge inspection time: 0.036141 seconds to read 18464128 bytes (510.891 MBPS)
+[0] Edge inspection time: 0.036054 seconds to read 18555624 bytes (514.662 MBPS)
+[2] Edge inspection time: 0.036708 seconds to read 18366980 bytes (500.354 MBPS)
+[4] Edge loading time: 0.036497 seconds to read 25970680 bytes (711.584 MBPS)
+[4] Graph construction complete.
+Loading edge-data while creating edges
+[0] Edge loading time: 0.052863 seconds to read 25578120 bytes (483.857 MBPS)
+[1] Edge loading time: 0.055829 seconds to read 25486616 bytes (456.512 MBPS)
+[0] Graph construction complete.
+[1] Graph construction complete.
+[2] Edge loading time: 0.058678 seconds to read 25389472 bytes (432.691 MBPS)
+[2] Graph construction complete.
+[3] Edge loading time: 0.061451 seconds to read 25377952 bytes (412.979 MBPS)
+[3] Graph construction complete.
+[0] InitializeGraph::go called
+[4] InitializeGraph::go called
+[2] InitializeGraph::go called
+[3] InitializeGraph::go called
+[1] InitializeGraph::go called
+[0] SSSP::go run 0 called
+[1] SSSP::go run 0 called
+[3] SSSP::go run 0 called
+[2] SSSP::go run 0 called
+[4] SSSP::go run 0 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06
+[0] SSSP::go run 1 called
+[1] SSSP::go run 1 called
+[4] SSSP::go run 1 called
+[2] SSSP::go run 1 called
+[3] SSSP::go run 1 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06
+[0] SSSP::go run 2 called
+[2] SSSP::go run 2 called
+[1] SSSP::go run 2 called
+[4] SSSP::go run 2 called
+[3] SSSP::go run 2 called
+Number of nodes visited from source 3300125 is 3598623
+Max distance from source 3300125 is 11557144
+Average distances on visited nodes is 3.44429e+06

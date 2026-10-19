@@ -1,0 +1,79 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, GetNodeDegrees, Time, HMAX, 5
+STAT, 0, GetNodeDegrees, Time, HostValues, 5; 5; 5; 5
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HSUM, 26182224
+STAT, 0, dGraph_Mining, EdgeInspectionBytesSent, HostValues, 6516036; 6572772; 6453780; 6639636
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HSUM, 12
+STAT, 0, dGraph_Mining, EdgeLoadingMessagesSent, HostValues, 3; 3; 3; 3
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HSUM, 67392
+STAT, 0, dGraph_Mining, EdgeLoadingBytesSent, HostValues, 17920; 16768; 17120; 15584
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HMAX, 11408
+STAT, 0, dGraph_Mining, EdgeLoadingMaxBytesSent, HostValues, 9080; 6808; 11408; 9544
+STAT, 0, dGraph_Mining, EdgeLoading, HMAX, 30
+STAT, 0, dGraph_Mining, EdgeLoading, HostValues, 28; 30; 29; 27
+STAT, 0, dGraph_Mining, TotalNodeProxies, HOST_0, 1098959
+STAT, 0, dGraph_Mining, TotalNodeProxies, HostValues, 1098959
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HOST_0, 1544926
+STAT, 0, dGraph_Mining, TotalEdgeProxies, HostValues, 1544926
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HOST_0, 3083796
+STAT, 0, dGraph_Mining, OriginalNumberEdges, HostValues, 3083796
+STAT, 0, dGraph_Mining, TotalKeptEdges, HOST_0, 1541898
+STAT, 0, dGraph_Mining, TotalKeptEdges, HostValues, 1541898
+STAT, 0, dGraph_Mining, GraphAllocation, HMAX, 2
+STAT, 0, dGraph_Mining, GraphAllocation, HostValues, 1; 2; 2; 1
+STAT, 0, dGraph_Mining, EdgeInspection, HMAX, 68
+STAT, 0, dGraph_Mining, EdgeInspection, HostValues, 67; 64; 64; 68
+STAT, 0, dGraph_Mining, GraphReading, HMAX, 3
+STAT, 0, dGraph_Mining, GraphReading, HostValues, 3; 3; 3; 3
+STAT, 0, DistBench, GraphConstructTime, HMAX, 126
+STAT, 0, DistBench, GraphConstructTime, HostValues, 123; 126; 126; 126
+STAT, 0, DistMiningBench, DistGraphInitialization, HMAX, 126
+STAT, 0, DistMiningBench, DistGraphInitialization, HostValues, 123; 126; 126; 126
+STAT, 0, CSREdgeSort, Time, HMAX, 3
+STAT, 0, CSREdgeSort, Time, HostValues, 3; 3; 3; 3
+STAT, 0, TC, SortEdgesCPU, HMAX, 3
+STAT, 0, TC, SortEdgesCPU, HostValues, 3; 3; 3; 3
+STAT, 0, TC, Timer_0, HMAX, 6
+STAT, 0, TC, Timer_0, HostValues, 6; 6; 6; 6
+STAT, 0, TC, Timer_1, HMAX, 6
+STAT, 0, TC, Timer_1, HostValues, 6; 6; 6; 6
+STAT, 0, TC, Timer_2, HMAX, 6
+STAT, 0, TC, Timer_2, HostValues, 6; 6; 6; 6
+STAT, 0, TC, TimerTotal, HMAX, 149
+STAT, 0, TC, TimerTotal, HostValues, 145; 149; 149; 149
+STAT, 0, TC_0, Time, HMAX, 6
+STAT, 0, TC_0, Time, HostValues, 6; 6; 6; 6
+STAT, 0, TC_0, Iterations, HSUM, 1090920
+STAT, 0, TC_0, Iterations, HostValues, 271500; 273864; 268906; 276650
+STAT, 0, TC_1, Time, HMAX, 6
+STAT, 0, TC_1, Time, HostValues, 6; 6; 5; 5
+STAT, 0, TC_1, Iterations, HSUM, 1090920
+STAT, 0, TC_1, Iterations, HostValues, 271500; 273864; 268906; 276650
+STAT, 0, TC_2, Time, HMAX, 6
+STAT, 0, TC_2, Time, HostValues, 6; 6; 5; 5
+STAT, 0, TC_2, Iterations, HSUM, 1090920
+STAT, 0, TC_2, Iterations, HostValues, 271500; 273864; 268906; 276650
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HOST_0, 1.00737
+STAT, 0, dGraph_Mining, ReplicationFactorNodes, HostValues, 1.00737
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HOST_0, 1.00196
+STAT, 0, dGraph_Mining, ReplicatonFactorEdges, HostValues, 1.00196
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.sym.gr -symmetricGraph -t=1 --runs=3 --statFile=roadNet-PA_p4.stats
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/triangle-counting-dist /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.sym.gr -symmetricGraph -t=1 --runs=3 --statFile=roadNet-PA_p4.stats
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 4
+PARAM, 0, DistBench, Hosts, HostValues, 4
+PARAM, 0, DistBench, Runs, HOST_0, 3
+PARAM, 0, DistBench, Runs, HostValues, 3
+PARAM, 0, DistBench, Run_UUID, HOST_0, 35c2a887-9b72-436d-838e-33528f3270b7
+PARAM, 0, DistBench, Run_UUID, HostValues, 35c2a887-9b72-436d-838e-33528f3270b7
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.sym.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/roadNet-PA/roadNet-PA.sym.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC; katyaPC; katyaPC
+PARAM, 0, dGraph_Mining, MiningGraph, HOST_0, 0
+PARAM, 0, dGraph_Mining, MiningGraph, HostValues, 0; 0; 0; 0
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HOST_0, 1
+PARAM, 0, dGraph_Mining, UsingDegreeOrdering, HostValues, 1; 1; 1; 1

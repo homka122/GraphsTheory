@@ -1,0 +1,65 @@
+STAT_TYPE, HOST_ID, REGION, CATEGORY, TOTAL_TYPE, TOTAL
+STAT, 0, dGraph_Generic, EdgeLoading, HMAX, 619
+STAT, 0, dGraph_Generic, EdgeLoading, HostValues, 619; 599
+STAT, 0, dGraph_Generic, CuSPStateRounds, HOST_0, 100
+STAT, 0, dGraph_Generic, CuSPStateRounds, HostValues, 100
+STAT, 0, dGraph_Generic, EdgeInspection, HMAX, 249
+STAT, 0, dGraph_Generic, EdgeInspection, HostValues, 183; 249
+STAT, 0, dGraph_Generic, GraphReading, HMAX, 93
+STAT, 0, dGraph_Generic, GraphReading, HostValues, 81; 93
+STAT, 0, DistBench, GraphConstructTime, HMAX, 1337
+STAT, 0, DistBench, GraphConstructTime, HostValues, 1183; 1337
+STAT, 0, ResetGraph_0, Time, HMAX, 19
+STAT, 0, ResetGraph_0, Time, HostValues, 13; 19
+STAT, 0, InitializeGraph_0, Time, HMAX, 24
+STAT, 0, InitializeGraph_0, Time, HostValues, 5; 24
+STAT, 0, PageRank_delta_0, Time, HMAX, 1700
+STAT, 0, PageRank_delta_0, Time, HostValues, 236; 1700
+STAT, 0, RESET:MIRRORS_0, Time, HMAX, 549
+STAT, 0, RESET:MIRRORS_0, Time, HostValues, 549; 121
+STAT, 0, PageRank_0, Time, HMAX, 32597
+STAT, 0, PageRank_0, Time, HostValues, 26900; 32597
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HSUM, 811150424
+STAT, 0, Gluon, ReduceSendBytes_PageRank_0, HostValues, 629946824; 181203600
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HSUM, 242
+STAT, 0, Gluon, ReduceNumMessages_PageRank_0, HostValues, 121; 121
+STAT, 0, Gluon, Sync_PageRank_0, HMAX, 8627
+STAT, 0, Gluon, Sync_PageRank_0, HostValues, 8627; 2732
+STAT, 0, PageRank, NumWorkItems_0, HSUM, 224279175
+STAT, 0, PageRank, NumWorkItems_0, HostValues, 49252098; 175027077
+STAT, 0, PageRank, NumIterations_0, HOST_0, 121
+STAT, 0, PageRank, NumIterations_0, HostValues, 121
+STAT, 0, PageRank, Timer_0, HMAX, 37361
+STAT, 0, PageRank, Timer_0, HostValues, 37361; 37361
+STAT, 0, PageRank, TimerTotal, HMAX, 38872
+STAT, 0, PageRank, TimerTotal, HostValues, 38869; 38872
+STAT, 0, PageRank_scan_calibration, Time, HMAX, 30
+STAT, 0, PageRank_scan_calibration, Time, HostValues, 5; 30
+STAT, 0, PageRankSanity, Time, HMAX, 26
+STAT, 0, PageRankSanity, Time, HostValues, 5; 26
+STAT, 0, PageRank_delta_scan_calibration, Time, HMAX, 21
+STAT, 0, PageRank_delta_scan_calibration, Time, HostValues, 21
+STAT, 0, Gluon, ReplicationFactor, HOST_0, 1.6236
+STAT, 0, Gluon, ReplicationFactor, HostValues, 1.6236
+PARAM, 0, DistBench, CommandLine, HOST_0, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-prof-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=1 --statFile=soc-LiveJournal1_p2_r2.stats --phaseLog=soc-LiveJournal1_p2_r2
+PARAM, 0, DistBench, CommandLine, HostValues, /home/homka/code/spbu/6sem/Galois/build/bin/pagerank-push-prof-dist /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr -t=1 --exec=Sync --maxIterations=100000000 --runs=1 --statFile=soc-LiveJournal1_p2_r2.stats --phaseLog=soc-LiveJournal1_p2_r2
+PARAM, 0, DistBench, Threads, HOST_0, 1
+PARAM, 0, DistBench, Threads, HostValues, 1
+PARAM, 0, DistBench, Hosts, HOST_0, 2
+PARAM, 0, DistBench, Hosts, HostValues, 2
+PARAM, 0, DistBench, Runs, HOST_0, 1
+PARAM, 0, DistBench, Runs, HostValues, 1
+PARAM, 0, DistBench, Run_UUID, HOST_0, f7688f63-ccf8-4c7f-b9aa-66f5887682b5
+PARAM, 0, DistBench, Run_UUID, HostValues, f7688f63-ccf8-4c7f-b9aa-66f5887682b5
+PARAM, 0, DistBench, Input, HOST_0, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, Input, HostValues, /home/homka/code/spbu/6sem/Galois/dataset/soc-LiveJournal1/soc-LiveJournal1.gr
+PARAM, 0, DistBench, PartitionScheme, HOST_0, oec
+PARAM, 0, DistBench, PartitionScheme, HostValues, oec
+PARAM, 0, DistBench, Hostname, HOST_0, katyaPC
+PARAM, 0, DistBench, Hostname, HostValues, katyaPC; katyaPC
+PARAM, 0, PageRank, Max Iterations, HOST_0, 100000000
+PARAM, 0, PageRank, Max Iterations, HostValues, 100000000
+PARAM, 0, PageRank, Tolerance, HOST_0, 1e-06
+PARAM, 0, PageRank, Tolerance, HostValues, 1e-06
+PARAM, 0, dGraph, GenericPartitioner, HOST_0, 0
+PARAM, 0, dGraph, GenericPartitioner, HostValues, 0; 0
